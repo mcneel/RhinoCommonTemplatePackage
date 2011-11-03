@@ -1,0 +1,11 @@
+
+/RhinoCommonProjectTemplate/bin
+/RhinoCommonProjectTemplate/obj
+/RhinoCommonProjectTemplate/Properties
+/RhinoCommonTemplatePackage/bin
+/RhinoCommonTemplatePackage/obj
+/RhinoCommonTemplatePackage/Properties
+/RhinoCommonWizard/Properties
+/RhinoCommonWizard/bin
+/RhinoCommonWizard/obj
+*.suo
