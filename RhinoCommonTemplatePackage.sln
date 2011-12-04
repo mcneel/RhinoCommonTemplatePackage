@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RhinoCommonTemplatePackage", "RhinoCommonTemplatePackage\RhinoCommonTemplatePackage.csproj", "{B72DF6B5-BD60-4140-8CDB-37EAB76BC475}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RhinoCommonProjectTemplate", "RhinoCommonProjectTemplate\RhinoCommonProjectTemplate.csproj", "{3B988238-6FA2-4F74-98AF-691FB9549C65}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSProjectTemplate", "CSProjectTemplate\CSProjectTemplate.csproj", "{3B988238-6FA2-4F74-98AF-691FB9549C65}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RhinoCommonWizard", "RhinoCommonWizard\RhinoCommonWizard.csproj", "{EED8E973-3E36-4C9D-94B6-402EC5DE82A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSCommandItem", "CSCommandItem\CSCommandItem.csproj", "{1508312D-9AC5-42DB-BCAB-1DF801FE9A72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,16 @@ Global
 		{EED8E973-3E36-4C9D-94B6-402EC5DE82A7}.Release|Mixed Platforms.Build.0 = Release|x86
 		{EED8E973-3E36-4C9D-94B6-402EC5DE82A7}.Release|x86.ActiveCfg = Release|x86
 		{EED8E973-3E36-4C9D-94B6-402EC5DE82A7}.Release|x86.Build.0 = Release|x86
+		{1508312D-9AC5-42DB-BCAB-1DF801FE9A72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1508312D-9AC5-42DB-BCAB-1DF801FE9A72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1508312D-9AC5-42DB-BCAB-1DF801FE9A72}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{1508312D-9AC5-42DB-BCAB-1DF801FE9A72}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{1508312D-9AC5-42DB-BCAB-1DF801FE9A72}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1508312D-9AC5-42DB-BCAB-1DF801FE9A72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1508312D-9AC5-42DB-BCAB-1DF801FE9A72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1508312D-9AC5-42DB-BCAB-1DF801FE9A72}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{1508312D-9AC5-42DB-BCAB-1DF801FE9A72}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{1508312D-9AC5-42DB-BCAB-1DF801FE9A72}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

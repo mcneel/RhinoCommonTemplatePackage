@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RhinoFinder.cs" />
     <Compile Include="UserInputForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +92,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="rhinocommonsignature.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

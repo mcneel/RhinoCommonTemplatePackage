@@ -1,25 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
-    <Name>RhinoCommon ProjectTemplate</Name>
-    <Description>A new RhinoCommon plug-in project</Description>
-    <Icon>RhinoCommonProjectTemplate.ico</Icon>
+    <Name>RhinoCommon Plug-In Template</Name>
+    <Description>A new RhinoCommon plug-in project that can be easily debugged and can automatically launch Rhino.</Description>
+    <Icon>icon.ico</Icon>
     <ProjectType>CSharp</ProjectType>
     <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
     <SortOrder>1000</SortOrder>
     <TemplateID>715730b5-3ff8-4a44-b2b6-18e20497fc3a</TemplateID>
     <CreateNewFolder>true</CreateNewFolder>
-    <DefaultName>RhinoCommonProjectTemplate</DefaultName>
+    <DefaultName>MyProject</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
   </TemplateData>
   <TemplateContent>
     <Project File="ProjectTemplate.csproj" ReplaceParameters="true">
-      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
-      <ProjectItem ReplaceParameters="true" OpenInEditor="true">AlertCommand.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.cs"
+                   OpenInEditor="true" OpenOrder="2">AssemblyInfo.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true" OpenOrder="1">$commandname$.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true">$pluginname$.cs</ProjectItem>
     </Project>
   </TemplateContent>
   <WizardExtension>
     <Assembly>RhinoCommonWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9cbe2d392744cfe6</Assembly>
-    <FullClassName>RhinoCommonWizard.CustomWizard.CollectInformationWizard</FullClassName>
+    <FullClassName>RhinoCommonWizard.CollectInformationWizard</FullClassName>
   </WizardExtension>
 </VSTemplate>

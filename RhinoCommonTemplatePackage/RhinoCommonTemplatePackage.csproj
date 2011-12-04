@@ -131,6 +131,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="icon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="license.rtf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -146,9 +150,17 @@
     <Content Include="Resources\Package.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RhinoCommonProjectTemplate\RhinoCommonProjectTemplate.csproj">
+    <ProjectReference Include="..\CSCommandItem\CSCommandItem.csproj">
+      <Project>{1508312D-9AC5-42DB-BCAB-1DF801FE9A72}</Project>
+      <Name>CSCommandItem</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+      <TemplateType>Item</TemplateType>
+      <VSIXSubPath>ItemTemplates</VSIXSubPath>
+    </ProjectReference>
+    <ProjectReference Include="..\CSProjectTemplate\CSProjectTemplate.csproj">
       <Project>{3B988238-6FA2-4F74-98AF-691FB9549C65}</Project>
-      <Name>RhinoCommonProjectTemplate</Name>
+      <Name>CSProjectTemplate</Name>
       <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
       <TemplateType>Project</TemplateType>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

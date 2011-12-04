@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Empty RhinoCommon Command</Name>
+    <Description>A new RhinoCommon Command implemented in C#</Description>
+    <Icon>icon.ico</Icon>
+    <TemplateID>dfb84904-8524-4dfd-8b1d-0f221dfabd7a</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>MyCommand.cs</DefaultName>
+    <SortOrder>-1000</SortOrder>
+    <TemplateGroupID>RhinoCommon</TemplateGroupID>
+  </TemplateData>
+  <TemplateContent>
+		<References>
+			<Reference>
+				<Assembly>System</Assembly>
+			</Reference>
+		</References>
+
+    <ProjectItem ReplaceParameters="true">MyCommand.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>
