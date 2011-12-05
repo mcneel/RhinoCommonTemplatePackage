@@ -19,6 +19,7 @@ Copyright (c) 2011 Robert McNeel and Associates</Description>
         <Edition>Ultimate</Edition>
         <Edition>Premium</Edition>
         <Edition>Pro</Edition>
+        <Edition>VBExpress</Edition>
         <Edition>VCSExpress</Edition>
       </VisualStudio>
     </SupportedProducts>
