@@ -282,7 +282,7 @@
           // 
           this.eitheronetext.AutoSize = true;
           this.eitheronetext.ForeColor = System.Drawing.Color.Red;
-          this.eitheronetext.Location = new System.Drawing.Point(152, 68);
+          this.eitheronetext.Location = new System.Drawing.Point(138, 67);
           this.eitheronetext.Name = "eitheronetext";
           this.eitheronetext.Size = new System.Drawing.Size(174, 39);
           this.eitheronetext.TabIndex = 15;
@@ -331,7 +331,7 @@
           // 
           // rhino64browse
           // 
-          this.rhino64browse.Location = new System.Drawing.Point(80, 98);
+          this.rhino64browse.Location = new System.Drawing.Point(75, 98);
           this.rhino64browse.Name = "rhino64browse";
           this.rhino64browse.Size = new System.Drawing.Size(24, 19);
           this.rhino64browse.TabIndex = 6;

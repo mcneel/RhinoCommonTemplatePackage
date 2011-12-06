@@ -166,7 +166,7 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <VSIXSubPath>ProjectTemplates</VSIXSubPath>
     </ProjectReference>
-    <ProjectReference Include="..\RhinoCommonWizard\RCWizard.csproj">
+    <ProjectReference Include="..\RCWizard\RCWizard.csproj">
       <Project>{EED8E973-3E36-4C9D-94B6-402EC5DE82A7}</Project>
       <Name>RCWizard</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3b</IncludeOutputGroupsInVSIX>
