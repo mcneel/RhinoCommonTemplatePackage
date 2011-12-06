@@ -8,7 +8,7 @@ using Rhino.Input.Custom;
 
 namespace $safeprojectname$
 {
-    [System.Runtime.InteropServices.Guid("$commandguid1$")]
+    [System.Runtime.InteropServices.Guid("$guid2$")]
     public class $commandname$ : Command
     {
         static $commandname$ _instance;
@@ -32,10 +32,9 @@ namespace $safeprojectname$
         }
 
         protected override Result RunCommand(RhinoDoc doc, RunMode mode)
-        {
+        {$if$ ($utilitywithsample$ == 1)
             // TODO: start here modifying the behaviour of your command.
             // ---
-$if$ ($utility$ == 1)
             RhinoApp.WriteLine("The {0} command will add a line right now.", EnglishName);
 
             Point3d pt0;
@@ -68,11 +67,14 @@ $if$ ($utility$ == 1)
             doc.Objects.AddLine(pt0, pt1);
             doc.Views.Redraw();
             RhinoApp.WriteLine("The {0} command added one line to the document.", EnglishName);
-$else$
-            RhinoApp.WriteLine("The {0} command is under construction.", EnglishName);
-$endif$
+
             // ---
-            
+$endif$$if$ ($utilitywithoutsample$ == 1)
+            RhinoApp.WriteLine("The {0} command is under construction.", EnglishName);
+$endif$$if$ ($utility$ == 0)
+            // Usually commands in $plugintype$ plug-ins are used to modify settings and behavior.
+            // The $plugintype$ work itself is performed by the $pluginname$ class.
+$endif$
             return Result.Success;
         }
     }

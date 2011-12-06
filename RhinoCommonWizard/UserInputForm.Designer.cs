@@ -36,6 +36,7 @@
           this.label2 = new System.Windows.Forms.Label();
           this.commandname = new System.Windows.Forms.TextBox();
           this.groupBox1 = new System.Windows.Forms.GroupBox();
+          this.commandsample = new System.Windows.Forms.CheckBox();
           this.exotericplugins = new System.Windows.Forms.Button();
           this.usefullabel = new System.Windows.Forms.Label();
           this.descriptionlabel = new System.Windows.Forms.Label();
@@ -47,6 +48,7 @@
           this.digitazer = new System.Windows.Forms.RadioButton();
           this.utility = new System.Windows.Forms.RadioButton();
           this.groupBox2 = new System.Windows.Forms.GroupBox();
+          this.eitheronetext = new System.Windows.Forms.Label();
           this.rhinocommonlabel = new System.Windows.Forms.Label();
           this.browseRhinocommon = new System.Windows.Forms.Button();
           this.rhinocommonpath = new System.Windows.Forms.Label();
@@ -56,13 +58,13 @@
           this.rhino32path = new System.Windows.Forms.Label();
           this.rhino64 = new System.Windows.Forms.CheckBox();
           this.rhino32 = new System.Windows.Forms.CheckBox();
-          this.eitheronetext = new System.Windows.Forms.Label();
           this.groupBox1.SuspendLayout();
           this.groupBox2.SuspendLayout();
           this.SuspendLayout();
           // 
           // pluginname
           // 
+          this.pluginname.BackColor = System.Drawing.SystemColors.Window;
           this.pluginname.Location = new System.Drawing.Point(128, 11);
           this.pluginname.Name = "pluginname";
           this.pluginname.Size = new System.Drawing.Size(220, 20);
@@ -117,6 +119,7 @@
           // 
           // groupBox1
           // 
+          this.groupBox1.Controls.Add(this.commandsample);
           this.groupBox1.Controls.Add(this.exotericplugins);
           this.groupBox1.Controls.Add(this.usefullabel);
           this.groupBox1.Controls.Add(this.descriptionlabel);
@@ -134,6 +137,18 @@
           this.groupBox1.TabStop = false;
           this.groupBox1.Text = "Type";
           // 
+          // commandsample
+          // 
+          this.commandsample.AutoSize = true;
+          this.commandsample.Checked = true;
+          this.commandsample.CheckState = System.Windows.Forms.CheckState.Checked;
+          this.commandsample.Location = new System.Drawing.Point(14, 76);
+          this.commandsample.Name = "commandsample";
+          this.commandsample.Size = new System.Drawing.Size(150, 17);
+          this.commandsample.TabIndex = 16;
+          this.commandsample.Text = "Provide command sample.";
+          this.commandsample.UseVisualStyleBackColor = true;
+          // 
           // exotericplugins
           // 
           this.exotericplugins.Location = new System.Drawing.Point(205, 31);
@@ -148,16 +163,16 @@
           // 
           this.usefullabel.AutoSize = true;
           this.usefullabel.ForeColor = System.Drawing.SystemColors.ControlDark;
-          this.usefullabel.Location = new System.Drawing.Point(6, 51);
+          this.usefullabel.Location = new System.Drawing.Point(6, 46);
           this.usefullabel.Name = "usefullabel";
-          this.usefullabel.Size = new System.Drawing.Size(147, 26);
+          this.usefullabel.Size = new System.Drawing.Size(120, 26);
           this.usefullabel.TabIndex = 15;
-          this.usefullabel.Text = "Useful to add new commands\r\nthat modify the document.";
+          this.usefullabel.Text = "Adds commands\r\nto modify the document.";
           // 
           // descriptionlabel
           // 
           this.descriptionlabel.AutoSize = true;
-          this.descriptionlabel.Location = new System.Drawing.Point(107, 97);
+          this.descriptionlabel.Location = new System.Drawing.Point(169, 97);
           this.descriptionlabel.Name = "descriptionlabel";
           this.descriptionlabel.Size = new System.Drawing.Size(77, 13);
           this.descriptionlabel.TabIndex = 10;
@@ -167,9 +182,9 @@
           // description
           // 
           this.description.Enabled = false;
-          this.description.Location = new System.Drawing.Point(190, 94);
+          this.description.Location = new System.Drawing.Point(249, 94);
           this.description.Name = "description";
-          this.description.Size = new System.Drawing.Size(133, 20);
+          this.description.Size = new System.Drawing.Size(79, 20);
           this.description.TabIndex = 2;
           this.description.TabStop = false;
           this.description.Text = "Text file";
@@ -178,7 +193,7 @@
           // extensionlabel
           // 
           this.extensionlabel.AutoSize = true;
-          this.extensionlabel.Location = new System.Drawing.Point(131, 74);
+          this.extensionlabel.Location = new System.Drawing.Point(194, 74);
           this.extensionlabel.Name = "extensionlabel";
           this.extensionlabel.Size = new System.Drawing.Size(53, 13);
           this.extensionlabel.TabIndex = 8;
@@ -188,7 +203,7 @@
           // extension
           // 
           this.extension.Enabled = false;
-          this.extension.Location = new System.Drawing.Point(190, 71);
+          this.extension.Location = new System.Drawing.Point(249, 71);
           this.extension.Name = "extension";
           this.extension.Size = new System.Drawing.Size(32, 20);
           this.extension.TabIndex = 2;
@@ -235,13 +250,14 @@
           // 
           this.utility.AutoSize = true;
           this.utility.Checked = true;
-          this.utility.Location = new System.Drawing.Point(15, 31);
+          this.utility.Location = new System.Drawing.Point(15, 25);
           this.utility.Name = "utility";
           this.utility.Size = new System.Drawing.Size(125, 17);
           this.utility.TabIndex = 2;
           this.utility.TabStop = true;
           this.utility.Text = "General utility plug-in.";
           this.utility.UseVisualStyleBackColor = true;
+          this.utility.CheckedChanged += new System.EventHandler(this.utility_CheckedChanged);
           // 
           // groupBox2
           // 
@@ -261,6 +277,18 @@
           this.groupBox2.TabIndex = 7;
           this.groupBox2.TabStop = false;
           this.groupBox2.Text = "Reference and debug paths";
+          // 
+          // eitheronetext
+          // 
+          this.eitheronetext.AutoSize = true;
+          this.eitheronetext.ForeColor = System.Drawing.Color.Red;
+          this.eitheronetext.Location = new System.Drawing.Point(152, 68);
+          this.eitheronetext.Name = "eitheronetext";
+          this.eitheronetext.Size = new System.Drawing.Size(174, 39);
+          this.eitheronetext.TabIndex = 15;
+          this.eitheronetext.Text = "Please select at least either a 32-bit\r\nor a 64-bit version of Rhinoceros\r\nto use" +
+              " in debugging.";
+          this.eitheronetext.Visible = false;
           // 
           // rhinocommonlabel
           // 
@@ -353,23 +381,12 @@
           this.rhino32.UseVisualStyleBackColor = true;
           this.rhino32.CheckedChanged += new System.EventHandler(this.rhino32_CheckedChanged);
           // 
-          // eitheronetext
-          // 
-          this.eitheronetext.AutoSize = true;
-          this.eitheronetext.ForeColor = System.Drawing.Color.Red;
-          this.eitheronetext.Location = new System.Drawing.Point(152, 68);
-          this.eitheronetext.Name = "eitheronetext";
-          this.eitheronetext.Size = new System.Drawing.Size(174, 39);
-          this.eitheronetext.TabIndex = 15;
-          this.eitheronetext.Text = "Please select at least either a 32-bit\r\nor a 64-bit version of Rhinoceros\r\nto use" +
-              " in debugging.";
-          this.eitheronetext.Visible = false;
-          // 
           // UserInputForm
           // 
           this.AcceptButton = this.finish;
           this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
           this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+          this.BackColor = System.Drawing.SystemColors.Control;
           this.CancelButton = this.cancel;
           this.ClientSize = new System.Drawing.Size(360, 372);
           this.Controls.Add(this.groupBox2);
@@ -380,6 +397,7 @@
           this.Controls.Add(this.finish);
           this.Controls.Add(this.label1);
           this.Controls.Add(this.pluginname);
+          this.ForeColor = System.Drawing.SystemColors.ControlText;
           this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
           this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
           this.MaximizeBox = false;
@@ -427,6 +445,7 @@
         private System.Windows.Forms.Label usefullabel;
         private System.Windows.Forms.Button exotericplugins;
         private System.Windows.Forms.Label eitheronetext;
+        private System.Windows.Forms.CheckBox commandsample;
     }
 }
 

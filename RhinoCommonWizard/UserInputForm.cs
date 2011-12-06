@@ -259,7 +259,6 @@ namespace RCWizard
     {
       _replacements["$pluginname$"] = pluginname.Text;
       _replacements["$commandname$"] = commandname.Text;
-      _replacements["$commandguid1$"] = Guid.NewGuid().ToString();
 
       _replacements["$rhinocommonURL$"] = rhinocommonpath.Text;
 
@@ -277,6 +276,11 @@ namespace RCWizard
 
       _replacements["$extension$"] = extension.Text.Replace(".", string.Empty);
       _replacements["$description$"] = description.Text;
+
+      _replacements["$utilitywithsample$"] = (utility.Checked && commandsample.Checked) ? "1" : "0";
+      _replacements["$utilitywithoutsample$"] = (utility.Checked && (!commandsample.Checked)) ? "1" : "0";
+      _replacements["$plugintype$"] =
+        utility.Checked?"utility" : digitazer.Checked?"digitizer": import.Checked?"import":"export";
     }
 
     private void exotericplugins_Click(object sender, EventArgs e)
@@ -291,7 +295,14 @@ namespace RCWizard
       descriptionlabel.Visible = true;
 
       usefullabel.Visible = false;
+
       exotericplugins.Visible = false;
+      commandsample.Location -= new Size(0, 32);
+    }
+
+    private void utility_CheckedChanged(object sender, EventArgs e)
+    {
+      commandsample.Enabled = utility.Checked;
     }
   }
 }

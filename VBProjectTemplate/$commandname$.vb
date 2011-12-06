@@ -8,7 +8,7 @@ Imports Rhino.Input.Custom
 
 Namespace $safeprojectname$
 
-    <System.Runtime.InteropServices.Guid("$commandguid1$")> _
+    <System.Runtime.InteropServices.Guid("$guid2$")> _
     Public Class $commandname$
         Inherits Command
 
@@ -35,9 +35,8 @@ Namespace $safeprojectname$
         End Property
 
         Protected Overrides Function RunCommand(ByVal doc As RhinoDoc, ByVal mode As RunMode) As Result
-            ' TODO: start here modifying the behaviour of your command.
+$if$ ($utilitywithsample$ == 1)            ' TODO: start here modifying the behaviour of your command.
             ' ---
-$if$ ($utility$ == 1)
             RhinoApp.WriteLine("The {0} command will add a line right now.", EnglishName)
 
             Dim pt0 As Point3d
@@ -66,11 +65,12 @@ $if$ ($utility$ == 1)
             doc.Objects.AddLine(pt0, pt1)
             doc.Views.Redraw()
             RhinoApp.WriteLine("The {0} command added one line to the document.", EnglishName)
-$else$
-            RhinoApp.WriteLine("The {0} command is under construction.", EnglishName)
-$endif$
             '' ---
-
+$endif$$if$ ($utilitywithoutsample$ == 1)            ' TODO: modify command.
+            RhinoApp.WriteLine("The {0} command is under construction.", EnglishName)
+$endif$$if$ ($utility$ == 0)            ' Usually commands in $plugintype$ plug-ins are used to modify settings and behavior.
+            ' The $plugintype$ work itself is performed by the $pluginname$ class.
+$endif$
             Return Result.Success
         End Function
     End Class
