@@ -270,7 +270,7 @@ namespace RCWizard
 
       _replacements["$utility$"] = utility.Checked ? "1" : "0";
       _replacements["$notutility$"] = utility.Checked ? "0" : "1";
-      _replacements["$digitalizer$"] = digitazer.Checked ? "1" : "0";
+      _replacements["$digitizer$"] = digitizer.Checked ? "1" : "0";
       _replacements["$import$"] = import.Checked ? "1" : "0";
       _replacements["$export$"] = export.Checked ? "1" : "0";
 
@@ -280,12 +280,12 @@ namespace RCWizard
       _replacements["$utilitywithsample$"] = (utility.Checked && commandsample.Checked) ? "1" : "0";
       _replacements["$utilitywithoutsample$"] = (utility.Checked && (!commandsample.Checked)) ? "1" : "0";
       _replacements["$plugintype$"] =
-        utility.Checked?"utility" : digitazer.Checked?"digitizer": import.Checked?"import":"export";
+        utility.Checked?"utility" : digitizer.Checked?"digitizer": import.Checked?"import":"export";
     }
 
     private void exotericplugins_Click(object sender, EventArgs e)
     {
-      digitazer.Visible = true;
+      digitizer.Visible = true;
       export.Visible = true;
       import.Visible = true;
 

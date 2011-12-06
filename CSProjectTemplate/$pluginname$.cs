@@ -10,7 +10,7 @@ $endif$namespace $safeprojectname$
     /// responsibility of Rhino to create an instance of this class.
     ///</summary>
 $if$ ($utility$ == 1)    public class $pluginname$ : Rhino.PlugIns.PlugIn
-$endif$$if$ ($digitalizer$ == 1)    public class $pluginname$ : Rhino.PlugIns.DigitizerPlugIn
+$endif$$if$ ($digitizer$ == 1)    public class $pluginname$ : Rhino.PlugIns.DigitizerPlugIn
 $endif$$if$ ($import$ == 1)    public class $pluginname$ : Rhino.PlugIns.FileImportPlugIn
 $endif$$if$ ($export$ == 1)    public class $pluginname$ : Rhino.PlugIns.FileExportPlugIn
 $endif$
@@ -27,22 +27,22 @@ $endif$
         {
             get { return _instance; }
         }
-$if$ ($digitalizer$ == 1)
+$if$ ($digitizer$ == 1)
         ///<summary>
         /// Defines the behavior in response to a request of a user to either enable or disable
-        /// input from the digitalizer.
+        /// input from the digitizer.
         /// It is called by Rhino. If enable is true and EnableDigitizer() returns false,
         /// then Rhino will not calibrate the digitizer.
         ///</summary>
         ///<param name="enable">If true, enable the digitizer. If false, disable the digitizer.</param>
-        ///<returns>You should return true if the digitalizer should be calibrated. Otherwise, false.</returns>
+        ///<returns>You should return true if the digitizer should be calibrated. Otherwise, false.</returns>
         protected override bool EnableDigitizer(bool enable)
         {
             throw new NotImplementedException("EnableDigitizer has no defined behavior.");
         }
 
         ///<summary>
-        /// Gets the unit system in which the digitalizer works.
+        /// Gets the unit system in which the digitizer works.
         /// passes points to SendPoint().  Rhino uses this value when it calibrates a digitizer.
         /// This unit system must not change.
         /// </summary>

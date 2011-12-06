@@ -45,7 +45,7 @@
           this.extension = new System.Windows.Forms.TextBox();
           this.import = new System.Windows.Forms.RadioButton();
           this.export = new System.Windows.Forms.RadioButton();
-          this.digitazer = new System.Windows.Forms.RadioButton();
+          this.digitizer = new System.Windows.Forms.RadioButton();
           this.utility = new System.Windows.Forms.RadioButton();
           this.groupBox2 = new System.Windows.Forms.GroupBox();
           this.eitheronetext = new System.Windows.Forms.Label();
@@ -128,7 +128,7 @@
           this.groupBox1.Controls.Add(this.extension);
           this.groupBox1.Controls.Add(this.import);
           this.groupBox1.Controls.Add(this.export);
-          this.groupBox1.Controls.Add(this.digitazer);
+          this.groupBox1.Controls.Add(this.digitizer);
           this.groupBox1.Controls.Add(this.utility);
           this.groupBox1.Location = new System.Drawing.Point(12, 63);
           this.groupBox1.Name = "groupBox1";
@@ -235,16 +235,16 @@
           this.export.Visible = false;
           this.export.CheckedChanged += new System.EventHandler(this.export_CheckedChanged);
           // 
-          // digitazer
+          // digitizer
           // 
-          this.digitazer.AutoSize = true;
-          this.digitazer.Location = new System.Drawing.Point(188, 14);
-          this.digitazer.Name = "digitazer";
-          this.digitazer.Size = new System.Drawing.Size(103, 17);
-          this.digitazer.TabIndex = 2;
-          this.digitazer.Text = "Digitazer plug-in.";
-          this.digitazer.UseVisualStyleBackColor = true;
-          this.digitazer.Visible = false;
+          this.digitizer.AutoSize = true;
+          this.digitizer.Location = new System.Drawing.Point(188, 14);
+          this.digitizer.Name = "digitizer";
+          this.digitizer.Size = new System.Drawing.Size(99, 17);
+          this.digitizer.TabIndex = 2;
+          this.digitizer.Text = "Digitizer plug-in.";
+          this.digitizer.UseVisualStyleBackColor = true;
+          this.digitizer.Visible = false;
           // 
           // utility
           // 
@@ -424,7 +424,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox commandname;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton digitazer;
+        private System.Windows.Forms.RadioButton digitizer;
         private System.Windows.Forms.RadioButton utility;
         private System.Windows.Forms.RadioButton import;
         private System.Windows.Forms.RadioButton export;
