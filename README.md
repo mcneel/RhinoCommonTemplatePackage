@@ -1,6 +1,18 @@
 New RhinoCommon SDK Wizards Package
 ===================================
 
+Building
+--------
+This projects depends upon the Visual Studio SDK: http://www.microsoft.com/download/en/details.aspx?id=2680
+Using VS IDE complilation in Release mode with RhinoCommonTemplatePackage as default project should produce a file named "RCPackage.vsix" inside /RhinoCommonTemplatePackage/bin.
+
+Updating
+--------
+Do not change the ID of the project and modify the version as stated in 
+source.extension.vsixmanifest to trigger update.
+
+Copyright
+---------
 Copyright (c) 2011 Robert McNeel & Associates. All Rights Reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -14,3 +26,4 @@ WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF MERCHANTABILITY ARE HERE
 DISCLAIMED.
 
 Rhinoceros is a registered trademark of Robert McNeel & Associates.
+
