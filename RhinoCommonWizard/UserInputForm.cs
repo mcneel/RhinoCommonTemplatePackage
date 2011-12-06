@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.IO;
 
-namespace RhinoCommonWizard
+namespace RCWizard
 {
   public partial class UserInputForm : Form
   {

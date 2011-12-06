@@ -1,4 +1,4 @@
-﻿namespace RhinoCommonWizard
+﻿namespace RCWizard
 {
     partial class UserInputForm
     {

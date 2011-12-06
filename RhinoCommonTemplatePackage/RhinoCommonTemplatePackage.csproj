@@ -8,8 +8,8 @@
     <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>McNeel.RhinoCommonTemplatePackage</RootNamespace>
-    <AssemblyName>RhinoCommonTemplatePackage</AssemblyName>
+    <RootNamespace>RCPackage</RootNamespace>
+    <AssemblyName>RCPackage</AssemblyName>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -150,39 +150,39 @@
     <Content Include="Resources\Package.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CSCommandItem\CSCommandItem.csproj">
+    <ProjectReference Include="..\CSCommandItem\CSCommand.csproj">
       <Project>{1508312D-9AC5-42DB-BCAB-1DF801FE9A72}</Project>
-      <Name>CSCommandItem</Name>
+      <Name>CSCommand</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
       <TemplateType>Item</TemplateType>
       <VSIXSubPath>ItemTemplates</VSIXSubPath>
     </ProjectReference>
-    <ProjectReference Include="..\CSProjectTemplate\CSProjectTemplate.csproj">
+    <ProjectReference Include="..\CSProjectTemplate\CSProject.csproj">
       <Project>{3B988238-6FA2-4F74-98AF-691FB9549C65}</Project>
-      <Name>CSProjectTemplate</Name>
+      <Name>CSProject</Name>
       <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
       <TemplateType>Project</TemplateType>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <VSIXSubPath>ProjectTemplates</VSIXSubPath>
     </ProjectReference>
-    <ProjectReference Include="..\RhinoCommonWizard\RhinoCommonWizard.csproj">
+    <ProjectReference Include="..\RhinoCommonWizard\RCWizard.csproj">
       <Project>{EED8E973-3E36-4C9D-94B6-402EC5DE82A7}</Project>
-      <Name>RhinoCommonWizard</Name>
+      <Name>RCWizard</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3b</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
-    <ProjectReference Include="..\VBCommandItem\VBCommandItem.vbproj">
+    <ProjectReference Include="..\VBCommandItem\VBCommand.vbproj">
       <Project>{57171780-2847-4BAA-9FD8-8C51D3D75989}</Project>
-      <Name>VBCommandItem</Name>
+      <Name>VBCommand</Name>
       <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
       <TemplateType>Item</TemplateType>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <VSIXSubPath>ItemTemplates</VSIXSubPath>
     </ProjectReference>
-    <ProjectReference Include="..\VBProjectTemplate\VBProjectTemplate.vbproj">
+    <ProjectReference Include="..\VBProjectTemplate\VBProject.vbproj">
       <Project>{F0B5760A-C703-4061-ACCD-CBF51B6C2D2F}</Project>
-      <Name>VBProjectTemplate</Name>
+      <Name>VBProject</Name>
       <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
       <TemplateType>Project</TemplateType>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

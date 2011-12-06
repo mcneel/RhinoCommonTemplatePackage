@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TemplateWizard;
 using EnvDTE;
 using System.IO;
 
-namespace RhinoCommonWizard
+namespace RCWizard
 {
   /// <summary>
   /// See: http://msdn.microsoft.com/en-us/library/ms185301.aspx

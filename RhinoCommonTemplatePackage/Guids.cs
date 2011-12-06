@@ -2,7 +2,7 @@
 // MUST match guids.h
 using System;
 
-namespace McNeel.RhinoCommonTemplatePackage
+namespace RCPackage
 {
     static class GuidList
     {

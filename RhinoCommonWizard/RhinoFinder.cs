@@ -5,7 +5,7 @@ using System.Text;
 using Microsoft.Win32;
 using System.IO;
 
-namespace RhinoCommonWizard
+namespace RCWizard
 {
   static class RhinoFinder
   {

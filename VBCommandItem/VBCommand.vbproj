@@ -66,7 +66,7 @@
     <None Include="MyCommand.vb" />
   </ItemGroup>
   <ItemGroup>
-    <VSTemplate Include="VBCommandItem.vstemplate" />
+    <VSTemplate Include="VBCommand.vstemplate" />
   </ItemGroup>
   <ItemGroup>
     <None Include="icon.ico" />

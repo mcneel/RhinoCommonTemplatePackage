@@ -83,7 +83,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <VSTemplate Include="VBProjectTemplate.vstemplate" />
+    <VSTemplate Include="VBProject.vstemplate" />
   </ItemGroup>
   <ItemGroup>
     <None Include="icon.ico" />
