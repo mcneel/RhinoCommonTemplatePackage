@@ -13,6 +13,7 @@ $if$ ($utility$ == 1)    public class $pluginname$ : Rhino.PlugIns.PlugIn
 $endif$$if$ ($digitizer$ == 1)    public class $pluginname$ : Rhino.PlugIns.DigitizerPlugIn
 $endif$$if$ ($import$ == 1)    public class $pluginname$ : Rhino.PlugIns.FileImportPlugIn
 $endif$$if$ ($export$ == 1)    public class $pluginname$ : Rhino.PlugIns.FileExportPlugIn
+$endif$$if$ ($rendering$ == 1)    public class $pluginname$ : Rhino.PlugIns.RenderPlugIn
 $endif$
     {
         static $pluginname$ _instance;
@@ -109,8 +110,34 @@ $endif$$if$ ($export$ == 1)
         {
             return Rhino.PlugIns.WriteFileResult.Failure;
         }
-$endif$
+$endif$$if$ ($rendering$ == 1)
+        /// <summary>
+        /// Is called when the user calls the _Render command
+        /// </summary>
+        /// <param name="doc">The document to be rendered.</param>
+        /// <param name="mode">The run mode: interactive or scripted.</param>
+        /// <param name="fastPreview">Whether the render is in preview-mode.</param>
+        /// <returns>The result of the command.</returns>
+        protected override Rhino.Commands.Result Render(RhinoDoc doc, Rhino.Commands.RunMode mode, bool fastPreview)
+        {
+            throw new NotImplementedException();
+        }
 
+        /// <summary>
+        /// Is called when the user calls the _RenderWindow command
+        /// </summary>
+        /// <param name="doc">The document to be rendered.</param>
+        /// <param name="mode">The run mode: interactive or scripted.</param>
+        /// <param name="fastPreview">Whether the render is in preview-mode.</param>
+        /// <param name="view">The view being rendered.</param>
+        /// <param name="rect">The rendering rectangle.</param>
+        /// <param name="inWindow">Whether rendering should appear in the window.</param>
+        /// <returns>The result of the command.</returns>
+        protected override Rhino.Commands.Result RenderWindow(RhinoDoc doc, Rhino.Commands.RunMode modes, bool fastPreview, Rhino.Display.RhinoView view, System.Drawing.Rectangle rect, bool inWindow)
+        {
+            throw new NotImplementedException();
+        }
+$endif$
         // You can override methods here to change the plug-in behavior on
         // loading and shut down, add options pages to the Rhino _Option command
         // and mantain plug-in wide options in a document.

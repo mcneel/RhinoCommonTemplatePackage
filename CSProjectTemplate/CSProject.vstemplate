@@ -15,9 +15,9 @@
   <TemplateContent>
     <Project File="ProjectTemplate.csproj" ReplaceParameters="true">
       <ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.cs"
-                   OpenInEditor="true" OpenOrder="2">AssemblyInfo.cs</ProjectItem>
+                   OpenInEditor="true" OpenOrder="3">AssemblyInfo.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" OpenInEditor="true" OpenOrder="1">$commandname$.cs</ProjectItem>
-      <ProjectItem ReplaceParameters="true">$pluginname$.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true" OpenOrder="2">$pluginname$.cs</ProjectItem>
     </Project>
   </TemplateContent>
   <WizardExtension>

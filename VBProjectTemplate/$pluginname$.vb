@@ -105,6 +105,31 @@ $endif$$if$ ($export$ == 1)
         Protected Overrides Function WriteFile(filename As String, index As Integer, doc As RhinoDoc, options As Rhino.FileIO.FileWriteOptions) As Rhino.PlugIns.WriteFileResult
 	        Return Rhino.PlugIns.WriteFileResult.Failure
         End Function
+$endif$$if$ ($rendering$ == 1)
+        ''' <summary>
+        ''' Is called when the user calls the _Render command
+        ''' </summary>
+        ''' <param name="doc">The document to be rendered.</param>
+        ''' <param name="mode">The run mode: interactive or scripted.</param>
+        ''' <param name="fastPreview">Whether the render is in preview-mode.</param>
+        ''' <returns>The result of the command.</returns>
+        Protected Overrides Function Render(doc As RhinoDoc, mode As Rhino.Commands.RunMode, fastPreview As Boolean) As Rhino.Commands.Result
+            Throw New NotImplementedException("Render s not implemented.")
+        End Function
+
+        ''' <summary>
+        ''' Is called when the user calls the _RenderWindow command
+        ''' </summary>
+        ''' <param name="doc">The document to be rendered.</param>
+        ''' <param name="mode">The run mode: interactive or scripted.</param>
+        ''' <param name="fastPreview">Whether the render is in preview-mode.</param>
+        ''' <param name="view">The view being rendered.</param>
+        ''' <param name="rect">The rendering rectangle.</param>
+        ''' <param name="inWindow">Whether rendering should appear in the window.</param>
+        ''' <returns>The result of the command.</returns>
+        Protected Overrides Function RenderWindow(RhinoDoc doc, Rhino.Commands.RunMode modes, bool fastPreview, Rhino.Display.RhinoView view, System.Drawing.Rectangle rect, bool inWindow) As Rhino.Commands.Result
+            throw new NotImplementedException()
+        End Function
 $endif$
 
         ' You can override methods here to change the plug-in behavior on

@@ -36,8 +36,9 @@
           this.label2 = new System.Windows.Forms.Label();
           this.commandname = new System.Windows.Forms.TextBox();
           this.groupBox1 = new System.Windows.Forms.GroupBox();
-          this.commandsample = new System.Windows.Forms.CheckBox();
           this.exotericplugins = new System.Windows.Forms.Button();
+          this.rendering = new System.Windows.Forms.RadioButton();
+          this.commandsample = new System.Windows.Forms.CheckBox();
           this.usefullabel = new System.Windows.Forms.Label();
           this.descriptionlabel = new System.Windows.Forms.Label();
           this.description = new System.Windows.Forms.TextBox();
@@ -83,20 +84,20 @@
           // finish
           // 
           this.finish.DialogResult = System.Windows.Forms.DialogResult.OK;
-          this.finish.Location = new System.Drawing.Point(192, 337);
+          this.finish.Location = new System.Drawing.Point(192, 353);
           this.finish.Name = "finish";
           this.finish.Size = new System.Drawing.Size(75, 23);
-          this.finish.TabIndex = 7;
+          this.finish.TabIndex = 10;
           this.finish.Text = "Finish";
           this.finish.UseVisualStyleBackColor = true;
           // 
           // cancel
           // 
           this.cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-          this.cancel.Location = new System.Drawing.Point(273, 337);
+          this.cancel.Location = new System.Drawing.Point(273, 353);
           this.cancel.Name = "cancel";
           this.cancel.Size = new System.Drawing.Size(75, 23);
-          this.cancel.TabIndex = 8;
+          this.cancel.TabIndex = 11;
           this.cancel.Text = "Cancel";
           this.cancel.UseVisualStyleBackColor = true;
           // 
@@ -119,8 +120,9 @@
           // 
           // groupBox1
           // 
-          this.groupBox1.Controls.Add(this.commandsample);
           this.groupBox1.Controls.Add(this.exotericplugins);
+          this.groupBox1.Controls.Add(this.rendering);
+          this.groupBox1.Controls.Add(this.commandsample);
           this.groupBox1.Controls.Add(this.usefullabel);
           this.groupBox1.Controls.Add(this.descriptionlabel);
           this.groupBox1.Controls.Add(this.description);
@@ -132,10 +134,31 @@
           this.groupBox1.Controls.Add(this.utility);
           this.groupBox1.Location = new System.Drawing.Point(12, 63);
           this.groupBox1.Name = "groupBox1";
-          this.groupBox1.Size = new System.Drawing.Size(336, 120);
+          this.groupBox1.Size = new System.Drawing.Size(336, 141);
           this.groupBox1.TabIndex = 6;
           this.groupBox1.TabStop = false;
           this.groupBox1.Text = "Type";
+          // 
+          // exotericplugins
+          // 
+          this.exotericplugins.Location = new System.Drawing.Point(205, 37);
+          this.exotericplugins.Name = "exotericplugins";
+          this.exotericplugins.Size = new System.Drawing.Size(107, 24);
+          this.exotericplugins.TabIndex = 4;
+          this.exotericplugins.Text = "Show more types...";
+          this.exotericplugins.UseVisualStyleBackColor = true;
+          this.exotericplugins.Click += new System.EventHandler(this.exotericplugins_Click);
+          // 
+          // rendering
+          // 
+          this.rendering.AutoSize = true;
+          this.rendering.Location = new System.Drawing.Point(188, 31);
+          this.rendering.Name = "rendering";
+          this.rendering.Size = new System.Drawing.Size(111, 17);
+          this.rendering.TabIndex = 2;
+          this.rendering.Text = "Rendering plug-in.";
+          this.rendering.UseVisualStyleBackColor = true;
+          this.rendering.Visible = false;
           // 
           // commandsample
           // 
@@ -145,19 +168,9 @@
           this.commandsample.Location = new System.Drawing.Point(14, 76);
           this.commandsample.Name = "commandsample";
           this.commandsample.Size = new System.Drawing.Size(150, 17);
-          this.commandsample.TabIndex = 16;
+          this.commandsample.TabIndex = 3;
           this.commandsample.Text = "Provide command sample.";
           this.commandsample.UseVisualStyleBackColor = true;
-          // 
-          // exotericplugins
-          // 
-          this.exotericplugins.Location = new System.Drawing.Point(205, 31);
-          this.exotericplugins.Name = "exotericplugins";
-          this.exotericplugins.Size = new System.Drawing.Size(107, 24);
-          this.exotericplugins.TabIndex = 15;
-          this.exotericplugins.Text = "Show more types...";
-          this.exotericplugins.UseVisualStyleBackColor = true;
-          this.exotericplugins.Click += new System.EventHandler(this.exotericplugins_Click);
           // 
           // usefullabel
           // 
@@ -172,7 +185,7 @@
           // descriptionlabel
           // 
           this.descriptionlabel.AutoSize = true;
-          this.descriptionlabel.Location = new System.Drawing.Point(169, 97);
+          this.descriptionlabel.Location = new System.Drawing.Point(162, 114);
           this.descriptionlabel.Name = "descriptionlabel";
           this.descriptionlabel.Size = new System.Drawing.Size(77, 13);
           this.descriptionlabel.TabIndex = 10;
@@ -182,7 +195,7 @@
           // description
           // 
           this.description.Enabled = false;
-          this.description.Location = new System.Drawing.Point(249, 94);
+          this.description.Location = new System.Drawing.Point(242, 111);
           this.description.Name = "description";
           this.description.Size = new System.Drawing.Size(79, 20);
           this.description.TabIndex = 2;
@@ -193,7 +206,7 @@
           // extensionlabel
           // 
           this.extensionlabel.AutoSize = true;
-          this.extensionlabel.Location = new System.Drawing.Point(194, 74);
+          this.extensionlabel.Location = new System.Drawing.Point(187, 91);
           this.extensionlabel.Name = "extensionlabel";
           this.extensionlabel.Size = new System.Drawing.Size(53, 13);
           this.extensionlabel.TabIndex = 8;
@@ -203,7 +216,7 @@
           // extension
           // 
           this.extension.Enabled = false;
-          this.extension.Location = new System.Drawing.Point(249, 71);
+          this.extension.Location = new System.Drawing.Point(242, 88);
           this.extension.Name = "extension";
           this.extension.Size = new System.Drawing.Size(32, 20);
           this.extension.TabIndex = 2;
@@ -226,7 +239,7 @@
           // export
           // 
           this.export.AutoSize = true;
-          this.export.Location = new System.Drawing.Point(188, 31);
+          this.export.Location = new System.Drawing.Point(188, 65);
           this.export.Name = "export";
           this.export.Size = new System.Drawing.Size(110, 17);
           this.export.TabIndex = 2;
@@ -271,7 +284,7 @@
           this.groupBox2.Controls.Add(this.rhino32path);
           this.groupBox2.Controls.Add(this.rhino64);
           this.groupBox2.Controls.Add(this.rhino32);
-          this.groupBox2.Location = new System.Drawing.Point(12, 189);
+          this.groupBox2.Location = new System.Drawing.Point(12, 210);
           this.groupBox2.Name = "groupBox2";
           this.groupBox2.Size = new System.Drawing.Size(336, 137);
           this.groupBox2.TabIndex = 7;
@@ -304,7 +317,7 @@
           this.browseRhinocommon.Location = new System.Drawing.Point(91, 17);
           this.browseRhinocommon.Name = "browseRhinocommon";
           this.browseRhinocommon.Size = new System.Drawing.Size(24, 19);
-          this.browseRhinocommon.TabIndex = 14;
+          this.browseRhinocommon.TabIndex = 5;
           this.browseRhinocommon.Text = "...";
           this.browseRhinocommon.UseVisualStyleBackColor = true;
           this.browseRhinocommon.Click += new System.EventHandler(this.browseRhinocommon_Click);
@@ -324,7 +337,7 @@
           this.rhino32browse.Location = new System.Drawing.Point(75, 64);
           this.rhino32browse.Name = "rhino32browse";
           this.rhino32browse.Size = new System.Drawing.Size(24, 19);
-          this.rhino32browse.TabIndex = 4;
+          this.rhino32browse.TabIndex = 7;
           this.rhino32browse.Text = "...";
           this.rhino32browse.UseVisualStyleBackColor = true;
           this.rhino32browse.Click += new System.EventHandler(this.rhino32browse_Click);
@@ -334,7 +347,7 @@
           this.rhino64browse.Location = new System.Drawing.Point(75, 98);
           this.rhino64browse.Name = "rhino64browse";
           this.rhino64browse.Size = new System.Drawing.Size(24, 19);
-          this.rhino64browse.TabIndex = 6;
+          this.rhino64browse.TabIndex = 9;
           this.rhino64browse.Text = "...";
           this.rhino64browse.UseVisualStyleBackColor = true;
           this.rhino64browse.Click += new System.EventHandler(this.rhino64browse_Click);
@@ -365,7 +378,7 @@
           this.rhino64.Location = new System.Drawing.Point(16, 100);
           this.rhino64.Name = "rhino64";
           this.rhino64.Size = new System.Drawing.Size(61, 17);
-          this.rhino64.TabIndex = 5;
+          this.rhino64.TabIndex = 8;
           this.rhino64.Text = "5 64-bit";
           this.rhino64.UseVisualStyleBackColor = true;
           this.rhino64.CheckedChanged += new System.EventHandler(this.rhino64_CheckedChanged);
@@ -376,7 +389,7 @@
           this.rhino32.Location = new System.Drawing.Point(15, 66);
           this.rhino32.Name = "rhino32";
           this.rhino32.Size = new System.Drawing.Size(61, 17);
-          this.rhino32.TabIndex = 3;
+          this.rhino32.TabIndex = 6;
           this.rhino32.Text = "5 32-bit";
           this.rhino32.UseVisualStyleBackColor = true;
           this.rhino32.CheckedChanged += new System.EventHandler(this.rhino32_CheckedChanged);
@@ -388,7 +401,7 @@
           this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
           this.BackColor = System.Drawing.SystemColors.Control;
           this.CancelButton = this.cancel;
-          this.ClientSize = new System.Drawing.Size(360, 372);
+          this.ClientSize = new System.Drawing.Size(360, 388);
           this.Controls.Add(this.groupBox2);
           this.Controls.Add(this.groupBox1);
           this.Controls.Add(this.label2);
@@ -443,9 +456,10 @@
         private System.Windows.Forms.Button browseRhinocommon;
         private System.Windows.Forms.Label rhinocommonpath;
         private System.Windows.Forms.Label usefullabel;
-        private System.Windows.Forms.Button exotericplugins;
         private System.Windows.Forms.Label eitheronetext;
         private System.Windows.Forms.CheckBox commandsample;
+        private System.Windows.Forms.Button exotericplugins;
+        private System.Windows.Forms.RadioButton rendering;
     }
 }
 

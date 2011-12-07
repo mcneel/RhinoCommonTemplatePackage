@@ -127,6 +127,29 @@ namespace RCWizard
       description.Enabled = enabled;
     }
 
+    private void exotericplugins_Click(object sender, EventArgs e)
+    {
+      digitizer.Visible =
+      rendering.Visible =
+      export.Visible =
+      import.Visible = true;
+
+      extension.Visible =
+      extensionlabel.Visible =
+      description.Visible =
+      descriptionlabel.Visible = true;
+
+      usefullabel.Visible = false;
+
+      exotericplugins.Visible = false;
+      commandsample.Location -= new Size(0, 32);
+    }
+
+    private void utility_CheckedChanged(object sender, EventArgs e)
+    {
+      commandsample.Enabled = utility.Checked;
+    }
+
     private void eithertextbox_TextChanged(object sender, EventArgs e)
     {
       TextBox realSender = sender as TextBox;
@@ -271,6 +294,7 @@ namespace RCWizard
       _replacements["$utility$"] = utility.Checked ? "1" : "0";
       _replacements["$notutility$"] = utility.Checked ? "0" : "1";
       _replacements["$digitizer$"] = digitizer.Checked ? "1" : "0";
+      _replacements["$rendering$"] = rendering.Checked ? "1" : "0";
       _replacements["$import$"] = import.Checked ? "1" : "0";
       _replacements["$export$"] = export.Checked ? "1" : "0";
 
@@ -280,29 +304,7 @@ namespace RCWizard
       _replacements["$utilitywithsample$"] = (utility.Checked && commandsample.Checked) ? "1" : "0";
       _replacements["$utilitywithoutsample$"] = (utility.Checked && (!commandsample.Checked)) ? "1" : "0";
       _replacements["$plugintype$"] =
-        utility.Checked?"utility" : digitizer.Checked?"digitizer": import.Checked?"import":"export";
-    }
-
-    private void exotericplugins_Click(object sender, EventArgs e)
-    {
-      digitizer.Visible = true;
-      export.Visible = true;
-      import.Visible = true;
-
-      extension.Visible = true;
-      extensionlabel.Visible = true;
-      description.Visible = true;
-      descriptionlabel.Visible = true;
-
-      usefullabel.Visible = false;
-
-      exotericplugins.Visible = false;
-      commandsample.Location -= new Size(0, 32);
-    }
-
-    private void utility_CheckedChanged(object sender, EventArgs e)
-    {
-      commandsample.Enabled = utility.Checked;
+        utility.Checked?"utility" : digitizer.Checked?"digitizer": import.Checked?"import": rendering.Checked?"rendering":"export";
     }
   }
 }
