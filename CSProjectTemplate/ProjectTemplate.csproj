@@ -71,10 +71,8 @@ $endif$ $if$ ($rhino5_64_checked$ == 1)<PropertyGroup Condition="'$(Configuratio
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>
-    Copy "$(TargetPath)" "$(TargetDir)$(ProjectName).rhp"
-    Erase "$(TargetPath)"
-    </PostBuildEvent>
+    <PostBuildEvent>Copy "$(TargetPath)" "$(TargetDir)$(ProjectName).rhp"
+Erase "$(TargetPath)"</PostBuildEvent>
   </PropertyGroup>$if$ ($rhino5_32_checked$ == 1)
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug32|AnyCPU' ">
     <StartArguments>/dotnetversion=4</StartArguments>
