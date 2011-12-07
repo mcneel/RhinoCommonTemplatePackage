@@ -1,16 +1,19 @@
-﻿$if$ ($notutility$ == 1)
-Imports System
+﻿$if$ ($notutility$ == 1)Imports System
 Imports Rhino
 
 $endif$Namespace $safeprojectname$
     '''<summary>
-    ''' Every RhinoCommon PlugIn must have one and only one PlugIn-derived
+    ''' <para>Every RhinoCommon .rhp assembly must have one and only one PlugIn-derived
     ''' class. DO NOT create instances of this class yourself. It is the
-    ''' responsibility of Rhino to create an instance of this class.
+    ''' responsibility of Rhino to create an instance of this class.</para>
+    ''' <para>To complete plug-in information, please also see all PlugInDescription
+    ''' attributes in AssemblyInfo.vb (you might need to click "Project" ->
+    ''' "Show All Files" to see it in the "Solution Explorer" window).</para>
     '''</summary>
     Public Class $pluginname$
 $if$ ($utility$ == 1)        Inherits Rhino.PlugIns.PlugIn
 $endif$$if$ ($digitizer$ == 1)        Inherits Rhino.PlugIns.DigitizerPlugIn
+$endif$$if$ ($rendering$ == 1)        Inherits Rhino.PlugIns.RenderPlugIn
 $endif$$if$ ($import$ == 1)        Inherits Rhino.PlugIns.FileImportPlugIn
 $endif$$if$ ($export$ == 1)        Inherits Rhino.PlugIns.FileExportPlugIn
 $endif$
@@ -36,7 +39,7 @@ $if$ ($digitizer$ == 1)
         '''<param name="enable">If true, enable the digitizer. If false, disable the digitizer.</param>
         '''<returns>You should return true if the digitizer should be calibrated. Otherwise, false.</returns>
         Protected Overrides Function EnableDigitizer(enable As Boolean) As Boolean
-	        Throw New NotImplementedException("EnableDigitizer has no defined behavior.")
+	        Throw New NotImplementedException("EnableDigitizer has no defined behavior in the $safeprojectname$.$pluginname$ class.")
         End Function
 
         '''<summary>
@@ -46,7 +49,7 @@ $if$ ($digitizer$ == 1)
         ''' </summary>
         Protected Overrides ReadOnly Property DigitizerUnitSystem() As UnitSystem
 	        Get
-		        Throw New NotImplementedException("DigitizerUnitSystem is not implemented.")
+		        Throw New NotImplementedException("DigitizerUnitSystem is not implemented in the $safeprojectname$.$pluginname$ class.")
 	        End Get
         End Property
 
@@ -58,7 +61,7 @@ $if$ ($digitizer$ == 1)
         ''' </summary>
         Protected Overrides ReadOnly Property PointTolerance() As Double
 	        Get
-		        Throw New NotImplementedException("PointTolerance is unknown.")
+		        Throw New NotImplementedException("PointTolerance is unknown in the $safeprojectname$.$pluginname$ class.")
 	        End Get
         End Property
 $endif$$if$ ($import$ == 1)
@@ -76,6 +79,7 @@ $endif$$if$ ($import$ == 1)
         ''' It is actually up to this method to read the file itself.
         ''' </summary>
         ''' <param name="filename">The complete path to the new file.</param>
+        ''' <param name="index">The index of the file type as it had been specified by the AddFileTypes method.</param>
         ''' <param name="doc">The document to be written.</param>
         ''' <param name="options">Options that specify how to write file.</param>
         ''' <returns>A value that defines success or a specific failure.</returns>
@@ -99,6 +103,7 @@ $endif$$if$ ($export$ == 1)
         ''' It is actually up to this method to write the file itself.
         ''' </summary>
         ''' <param name="filename">The complete path to the new file.</param>
+        ''' <param name="index">The index of the file type as it had been specified by the AddFileTypes method.</param>
         ''' <param name="doc">The document to be written.</param>
         ''' <param name="options">Options that specify how to write file.</param>
         ''' <returns>A value that defines success or a specific failure.</returns>
@@ -107,18 +112,18 @@ $endif$$if$ ($export$ == 1)
         End Function
 $endif$$if$ ($rendering$ == 1)
         ''' <summary>
-        ''' Is called when the user calls the _Render command
+        ''' Is called when the user calls the _Render command.
         ''' </summary>
         ''' <param name="doc">The document to be rendered.</param>
         ''' <param name="mode">The run mode: interactive or scripted.</param>
         ''' <param name="fastPreview">Whether the render is in preview-mode.</param>
         ''' <returns>The result of the command.</returns>
         Protected Overrides Function Render(doc As RhinoDoc, mode As Rhino.Commands.RunMode, fastPreview As Boolean) As Rhino.Commands.Result
-            Throw New NotImplementedException("Render s not implemented.")
+            Throw New NotImplementedException("Render is not implemented in the $safeprojectname$.$pluginname$ class.")
         End Function
 
         ''' <summary>
-        ''' Is called when the user calls the _RenderWindow command
+        ''' Is called when the user calls the _RenderWindow command.
         ''' </summary>
         ''' <param name="doc">The document to be rendered.</param>
         ''' <param name="mode">The run mode: interactive or scripted.</param>
@@ -127,8 +132,8 @@ $endif$$if$ ($rendering$ == 1)
         ''' <param name="rect">The rendering rectangle.</param>
         ''' <param name="inWindow">Whether rendering should appear in the window.</param>
         ''' <returns>The result of the command.</returns>
-        Protected Overrides Function RenderWindow(RhinoDoc doc, Rhino.Commands.RunMode modes, bool fastPreview, Rhino.Display.RhinoView view, System.Drawing.Rectangle rect, bool inWindow) As Rhino.Commands.Result
-            throw new NotImplementedException()
+        Protected Overrides Function RenderWindow(doc As RhinoDoc, mode As Rhino.Commands.RunMode, fastPreview As Boolean, view As Rhino.Display.RhinoView, rect As System.Drawing.Rectangle, inWindow As Boolean) As Rhino.Commands.Result
+            throw new NotImplementedException("RenderWindow is not implemented in the $safeprojectname$.$pluginname$ class.")
         End Function
 $endif$
 

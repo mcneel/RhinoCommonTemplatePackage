@@ -1,13 +1,15 @@
-﻿$if$ ($notutility$ == 1)
-using System;
+﻿$if$ ($notutility$ == 1)using System;
 using Rhino;
 
 $endif$namespace $safeprojectname$
 {
     ///<summary>
-    /// Every RhinoCommon PlugIn must have one and only one PlugIn-derived
+    /// <para>Every RhinoCommon .rhp assembly must have one and only one PlugIn-derived
     /// class. DO NOT create instances of this class yourself. It is the
-    /// responsibility of Rhino to create an instance of this class.
+    /// responsibility of Rhino to create an instance of this class.</para>
+    /// <para>To complete plug-in information, please also see all PlugInDescription
+    /// attributes in AssemblyInfo.cs (you might need to click "Project" ->
+    /// "Show All Files" to see it in the "Solution Explorer" window).</para>
     ///</summary>
 $if$ ($utility$ == 1)    public class $pluginname$ : Rhino.PlugIns.PlugIn
 $endif$$if$ ($digitizer$ == 1)    public class $pluginname$ : Rhino.PlugIns.DigitizerPlugIn
@@ -39,7 +41,7 @@ $if$ ($digitizer$ == 1)
         ///<returns>You should return true if the digitizer should be calibrated. Otherwise, false.</returns>
         protected override bool EnableDigitizer(bool enable)
         {
-            throw new NotImplementedException("EnableDigitizer has no defined behavior.");
+            throw new NotImplementedException("EnableDigitizer has no defined behavior in the $safeprojectname$.$pluginname$ class.");
         }
 
         ///<summary>
@@ -49,7 +51,7 @@ $if$ ($digitizer$ == 1)
         /// </summary>
         protected override UnitSystem DigitizerUnitSystem
         {
-            get { throw new NotImplementedException("DigitizerUnitSystem is not implemented."); }
+            get { throw new NotImplementedException("DigitizerUnitSystem is not implemented in the $safeprojectname$.$pluginname$ class."); }
         }
 
         /// <summary>
@@ -60,7 +62,7 @@ $if$ ($digitizer$ == 1)
         /// </summary>
         protected override double PointTolerance
         {
-            get { throw new NotImplementedException("PointTolerance is unknown."); }
+            get { throw new NotImplementedException("PointTolerance is unknown in the $safeprojectname$.$pluginname$ class."); }
         }
 $endif$$if$ ($import$ == 1)
         ///<summary>Defines file extensions that this import plug-in is designed to read.</summary>
@@ -78,6 +80,7 @@ $endif$$if$ ($import$ == 1)
         /// It is actually up to this method to read the file itself.
         /// </summary>
         /// <param name="filename">The complete path to the new file.</param>
+        /// <param name="index">The index of the file type as it had been specified by the AddFileTypes method.</param>
         /// <param name="doc">The document to be written.</param>
         /// <param name="options">Options that specify how to write file.</param>
         /// <returns>A value that defines success or a specific failure.</returns>
@@ -103,6 +106,7 @@ $endif$$if$ ($export$ == 1)
         /// It is actually up to this method to write the file itself.
         /// </summary>
         /// <param name="filename">The complete path to the new file.</param>
+        /// <param name="index">The index of the file type as it had been specified by the AddFileTypes method.</param>
         /// <param name="doc">The document to be written.</param>
         /// <param name="options">Options that specify how to write file.</param>
         /// <returns>A value that defines success or a specific failure.</returns>
@@ -112,7 +116,7 @@ $endif$$if$ ($export$ == 1)
         }
 $endif$$if$ ($rendering$ == 1)
         /// <summary>
-        /// Is called when the user calls the _Render command
+        /// Is called when the user calls the _Render command.
         /// </summary>
         /// <param name="doc">The document to be rendered.</param>
         /// <param name="mode">The run mode: interactive or scripted.</param>
@@ -120,11 +124,11 @@ $endif$$if$ ($rendering$ == 1)
         /// <returns>The result of the command.</returns>
         protected override Rhino.Commands.Result Render(RhinoDoc doc, Rhino.Commands.RunMode mode, bool fastPreview)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException("Render is not implemented in the $safeprojectname$.$pluginname$ class.");
         }
 
         /// <summary>
-        /// Is called when the user calls the _RenderWindow command
+        /// Is called when the user calls the _RenderWindow command.
         /// </summary>
         /// <param name="doc">The document to be rendered.</param>
         /// <param name="mode">The run mode: interactive or scripted.</param>
@@ -133,9 +137,9 @@ $endif$$if$ ($rendering$ == 1)
         /// <param name="rect">The rendering rectangle.</param>
         /// <param name="inWindow">Whether rendering should appear in the window.</param>
         /// <returns>The result of the command.</returns>
-        protected override Rhino.Commands.Result RenderWindow(RhinoDoc doc, Rhino.Commands.RunMode modes, bool fastPreview, Rhino.Display.RhinoView view, System.Drawing.Rectangle rect, bool inWindow)
+        protected override Rhino.Commands.Result RenderWindow(RhinoDoc doc, Rhino.Commands.RunMode mode, bool fastPreview, Rhino.Display.RhinoView view, System.Drawing.Rectangle rect, bool inWindow)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException("RenderWindow is not implemented by the $safeprojectname$.$pluginname$ class.");
         }
 $endif$
         // You can override methods here to change the plug-in behavior on

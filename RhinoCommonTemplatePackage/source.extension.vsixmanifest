@@ -13,8 +13,9 @@ For support about this wizard, contact the Rhino Developer Newsgroup, news://new
 
 Copyright (c) 2011 Robert McNeel and Associates. All rights reserved.</Description>
     <Locale>1033</Locale>
-    <MoreInfoUrl>http://wiki.mcneel.com/developer/rhinocommon</MoreInfoUrl>
+    <MoreInfoUrl>http://visualstudiogallery.msdn.microsoft.com/16053049-7db2-4c9f-961a-53274ac92ace</MoreInfoUrl>
     <License>license.rtf</License>
+    <GettingStartedGuide>http://wiki.mcneel.com/developer/rhinocommon</GettingStartedGuide>
     <Icon>icon.ico</Icon>
     <InstalledByMsi>false</InstalledByMsi>
     <SupportedProducts>
