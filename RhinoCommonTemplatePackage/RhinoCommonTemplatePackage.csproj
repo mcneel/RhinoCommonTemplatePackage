@@ -196,6 +196,14 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <VSIXSubPath>ProjectTemplates</VSIXSubPath>
     </ProjectReference>
+    <ProjectReference Include="..\VBZooPlugIn\VBZooPlugIn.vbproj">
+      <Project>{8F351A61-218C-42A3-8F7D-8B6CCAB731F5}</Project>
+      <Name>VBZooPlugIn</Name>
+      <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+      <TemplateType>Project</TemplateType>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <VSIXSubPath>ProjectTemplates</VSIXSubPath>
+    </ProjectReference>
     <ProjectReference Include="..\ZooWizard\ZooWizard.csproj">
       <Project>{79D3F8D0-FE2A-4ABC-B202-7514E832EA08}</Project>
       <Name>ZooWizard</Name>
