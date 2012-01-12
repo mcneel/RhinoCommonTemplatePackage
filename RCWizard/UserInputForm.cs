@@ -20,21 +20,13 @@ namespace RCWizard
       _replacements = replacements;
       InitializeComponent();
 
-      //Title
-      this.Text = string.Format(this.Text, _replacements["$safeprojectname$"]);
-
       if (_replacements != null)
       {
-        if (_replacements.ContainsKey("$safeprojectname$"))
-        {
-          pluginname.Text = _replacements["$safeprojectname$"] + "PlugIn";
-          commandname.Text = _replacements["$safeprojectname$"] + "Command";
-        }
-        else
-        {
-          pluginname.Text = "MyPlugin";
-          commandname.Text = "MyCommand";
-        }
+        //Title
+        this.Text = string.Format(this.Text, _replacements["$safeprojectname$"]);
+
+        pluginname.Text = _replacements["$safeprojectname$"] + "PlugIn";
+        commandname.Text = _replacements["$safeprojectname$"] + "Command";
 
         string path, exeName;
         bool ok32 = RhinoFinder.FindRhino5_32bit(out path, out exeName);

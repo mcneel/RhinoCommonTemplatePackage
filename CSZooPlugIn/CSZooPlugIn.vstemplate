@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Zoo PlugIn</Name>
+    <Description>A C# project to build a Rhino Zoo plugin.</Description>
+    <Icon>icon.ico</Icon>
+    <ProjectType>CSharp</ProjectType>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+    <SortOrder>1000</SortOrder>
+    <TemplateID>eda9e98f-d47f-442a-b9e6-910d8a7137e2</TemplateID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>MyZooPlugIn</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="ProjectTemplate.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true">$pluginclassname$.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>ZooWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9cbe2d392744cfe6</Assembly>
+    <FullClassName>ZooWizard.CollectInformationWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>
