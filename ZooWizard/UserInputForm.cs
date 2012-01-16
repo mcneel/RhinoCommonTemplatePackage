@@ -26,7 +26,7 @@ namespace ZooWizard
 
       pluginclassname.Text = _replacements["$safeprojectname$"] + "Class";
 
-      _replacements["$zooguid$"] = Guid.NewGuid().ToString();
+      _replacements["$zooguid$"] = string.Empty;
       zooguid.Text = _replacements["$zooguid$"];
 
       try
@@ -58,18 +58,26 @@ namespace ZooWizard
 
     private void ValidateFormAndSetFinish()
     {
-      Guid id; //only here out of necessity
+      bool guidOk = IsGuidValid(zooguid.Text);
+      if (guidOk)
+        zooguid.Text = new Guid(zooguid.Text).ToString();
 
       finish.Enabled =
         IsTextBoxAllRight(pluginclassname) &&
         IsTextBoxAllRight(zooguid) &&
         File.Exists(zoodllpath.Text) &&
-        Guid.TryParse(zooguid.Text, out id);
+        guidOk;
     }
 
     private bool IsTextBoxAllRight(TextBox tb)
     {
       return !string.IsNullOrEmpty(tb.Text);
+    }
+
+    private bool IsGuidValid(string text)
+    {
+      Guid id;
+      return Guid.TryParse(text, out id);
     }
 
     private void textbox_TextChanged(object sender, EventArgs e)
@@ -140,6 +148,11 @@ namespace ZooWizard
       _replacements["$zooguid$"] = zooguid.Text;
 
       _replacements["$zoodllpath$"] = zoodllpath.Text;
+    }
+
+    private void UserInputForm_Load(object sender, EventArgs e)
+    {
+
     }
   }
 }

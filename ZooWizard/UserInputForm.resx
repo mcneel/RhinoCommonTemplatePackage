@@ -118,9 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label3.Text" xml:space="preserve">
-    <value>C++ SDK: this value is returned by CRhinoPlugIn::PlugInID() override.
-.NET SDK: this value is returned by MRhinoPlugIn.PlugInID() override.
-RhinoCommon: this value is stored in plug-in assembly GuidAttribute.</value>
+    <value>This is the ID of the Rhinoceros plug-in that will use this Zoo plug-in. In
+the C++ SDK, this value is returned by CRhinoPlugIn::PlugInID(). In the 
+.NET SDK, it is returned by MRhinoPlugIn.PlugInID(). In RhinoCommon,
+this value is stored in the plug-in assembly GuidAttribute.</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

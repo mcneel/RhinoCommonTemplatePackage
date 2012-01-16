@@ -1,14 +1,17 @@
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
     <Name>Zoo PlugIn</Name>
-    <Description>A Vb.Net project to build a Rhino Zoo plugin.</Description>
+    <Description xml:space="preserve">A Vb.Net project to build a Rhino Zoo plugin.
+
+This requires Zoo 5.0 to be installed on your machine.
+Also, remember to copy the ID from your Rhinoceros plug-in before continuing.</Description>
     <Icon>icon.ico</Icon>
     <ProjectType>VisualBasic</ProjectType>
     <TemplateID>72efd855-405b-4661-b735-2e558830cc38</TemplateID>
     <SortOrder>1000</SortOrder>
     <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
     <CreateNewFolder>true</CreateNewFolder>
-    <DefaultName>VBZooPlugIn</DefaultName>
+    <DefaultName>MyZooPlugIn</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
   </TemplateData>
