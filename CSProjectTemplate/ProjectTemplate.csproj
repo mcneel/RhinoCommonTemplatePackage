@@ -44,11 +44,7 @@ $endif$ $if$ ($rhino5_64_checked$ == 1)<PropertyGroup Condition="'$(Configuratio
 	<ItemGroup>
 		<Reference Include="System"/>
 		<Reference Include="System.Core"/>
-    <Reference Include="System.Data"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
     <Reference Include="System.Drawing"/>
-    <Reference Include="System.Xml"/>
-		<Reference Include="System.Xml.Linq"/>
     <Reference Include="System.Windows.Forms" />
 		<Reference Include="Microsoft.CSharp"/>
     <Reference Include="RhinoCommon">
@@ -75,7 +71,7 @@ $endif$ $if$ ($rhino5_64_checked$ == 1)<PropertyGroup Condition="'$(Configuratio
 Erase "$(TargetPath)"</PostBuildEvent>
   </PropertyGroup>$if$ ($rhino5_32_checked$ == 1)
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug32|AnyCPU' ">
-    <StartArguments>/dotnetversion=4</StartArguments>
+    <StartArguments></StartArguments>
     <StartAction>Program</StartAction>
     <StartProgram>$rhino5_32_URL$</StartProgram>
   </PropertyGroup>$endif$

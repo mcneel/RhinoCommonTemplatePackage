@@ -11,18 +11,17 @@ namespace $safeprojectname$
     [System.Runtime.InteropServices.Guid("$guid2$")]
     public class $commandname$ : Command
     {
-        static $commandname$ _instance;
         public $commandname$()
         {
             // Rhino only creates one instance of each command class defined in a
-            // plug-in, so it is safe to store a refence in a static field.
-            _instance = this;
+            // plug-in, so it is safe to store a refence in a static property.
+            Instance = this;
         }
 
         ///<summary>The only instance of this command.</summary>
         public static $commandname$ Instance
         {
-            get { return _instance; }
+            get; private set;
         }
 
         ///<returns>The command name as it appears on the Rhino command line.</returns>

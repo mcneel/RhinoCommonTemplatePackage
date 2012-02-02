@@ -18,17 +18,15 @@ $endif$$if$ ($export$ == 1)    public class $pluginname$ : Rhino.PlugIns.FileExp
 $endif$$if$ ($rendering$ == 1)    public class $pluginname$ : Rhino.PlugIns.RenderPlugIn
 $endif$
     {
-        static $pluginname$ _instance;
-
         public $pluginname$()
         {
-            _instance = this;
+            Instance = this;
         }
         
         ///<summary>Gets the only instance of the $pluginname$ plug-in.</summary>
         public static $pluginname$ Instance
         {
-            get { return _instance; }
+            get; private set;
         }
 $if$ ($digitizer$ == 1)
         ///<summary>
