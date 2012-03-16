@@ -3,7 +3,7 @@
   <Identifier Id="1eb60c29-eb50-46e1-a980-ee12403bb5bf">
     <Name>RhinoCommon templates for v5</Name>
     <Author>Robert McNeel &amp; Associates</Author>
-    <Version>0.1.5.0</Version>
+    <Version>0.1.5.2</Version>
     <Description xml:space="preserve">Adds plug-in, command and zoo wizards for RhinoCommon projects. This includes digitizer, render, import and export plug-ins. Makes setting up debugging easier and automatically references RhinoCommon.dll. Rhinoceros 5 is a requirement for this wizard to operate correctly.
 
 For more information about RhinoCommon, see the Rhino wiki website at
@@ -17,6 +17,7 @@ Copyright (c) 2011 Robert McNeel and Associates. All rights reserved.</Descripti
     <License>license.rtf</License>
     <GettingStartedGuide>http://wiki.mcneel.com/developer/rhinocommon</GettingStartedGuide>
     <Icon>icon.ico</Icon>
+    <PreviewImage>rhino.png</PreviewImage>
     <InstalledByMsi>false</InstalledByMsi>
     <SupportedProducts>
       <VisualStudio Version="10.0">
