@@ -27,8 +27,15 @@ Copyright (c) 2011 Robert McNeel and Associates. All rights reserved.</Descripti
         <Edition>VBExpress</Edition>
         <Edition>VCSExpress</Edition>
       </VisualStudio>
+      <VisualStudio Version="11.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+        <Edition>Pro</Edition>
+        <Edition>VBExpress</Edition>
+        <Edition>VCSExpress</Edition>
+      </VisualStudio>
     </SupportedProducts>
-    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" />
   </Identifier>
   <References />
   <Content>
