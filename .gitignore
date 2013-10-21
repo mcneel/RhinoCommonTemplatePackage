@@ -1,8 +1,4 @@
 
-/RhinoCommonProjectTemplate/bin
-/RhinoCommonProjectTemplate/obj
-/RhinoCommonTemplatePackage/bin
-/RhinoCommonTemplatePackage/obj
-/RCWizard/bin
-/RCWizard/obj
+*/bin
+*/obj
 *.suo
