@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.IO;
@@ -13,21 +10,21 @@ namespace ZooWizard
 {
   public partial class UserInputForm : Form
   {
-    Dictionary<string, string> _replacements;
+    readonly Dictionary<string, string> m_replacements;
 
     public UserInputForm(Dictionary<string, string> replacements)
     {
-      _replacements = replacements;
+      m_replacements = replacements;
       InitializeComponent();
       if (replacements == null) return;
 
       //Title
-      this.Text = string.Format(this.Text, _replacements["$safeprojectname$"]);
+      this.Text = string.Format(this.Text, m_replacements["$safeprojectname$"]);
 
-      pluginclassname.Text = _replacements["$safeprojectname$"] + "Class";
+      pluginclassname.Text = m_replacements["$safeprojectname$"] + "Class";
 
-      _replacements["$zooguid$"] = string.Empty;
-      zooguid.Text = _replacements["$zooguid$"];
+      m_replacements["$zooguid$"] = string.Empty;
+      zooguid.Text = m_replacements["$zooguid$"];
 
       try
       {
@@ -96,8 +93,8 @@ namespace ZooWizard
         }
       }
 
-      if (pluginclassname.Text == _replacements["$safeprojectname$"])
-        pluginclassname.Text = _replacements["$safeprojectname$"] + "Class";
+      if (pluginclassname.Text == m_replacements["$safeprojectname$"])
+        pluginclassname.Text = m_replacements["$safeprojectname$"] + "Class";
 
       ValidateFormAndSetFinish();
     }
@@ -144,10 +141,10 @@ namespace ZooWizard
 
     private void FinalVariableSetup()
     {
-      _replacements["$pluginclassname$"] = pluginclassname.Text;
-      _replacements["$zooguid$"] = zooguid.Text;
+      m_replacements["$pluginclassname$"] = pluginclassname.Text;
+      m_replacements["$zooguid$"] = zooguid.Text;
 
-      _replacements["$zoodllpath$"] = zoodllpath.Text;
+      m_replacements["$zoodllpath$"] = zoodllpath.Text;
     }
 
     private void UserInputForm_Load(object sender, EventArgs e)

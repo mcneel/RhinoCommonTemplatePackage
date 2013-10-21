@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.IO;
@@ -13,20 +10,20 @@ namespace RCWizard
 {
   public partial class UserInputForm : Form
   {
-    Dictionary<string, string> _replacements;
+    readonly Dictionary<string, string> m_replacements;
 
     public UserInputForm(Dictionary<string, string> replacements)
     {
-      _replacements = replacements;
+      m_replacements = replacements;
       InitializeComponent();
 
-      if (_replacements != null)
+      if (m_replacements != null)
       {
         //Title
-        this.Text = string.Format(this.Text, _replacements["$safeprojectname$"]);
+        this.Text = string.Format(this.Text, m_replacements["$safeprojectname$"]);
 
-        pluginname.Text = _replacements["$safeprojectname$"] + "PlugIn";
-        commandname.Text = _replacements["$safeprojectname$"] + "Command";
+        pluginname.Text = m_replacements["$safeprojectname$"] + "PlugIn";
+        commandname.Text = m_replacements["$safeprojectname$"] + "Command";
 
         string path, exeName;
         bool ok32 = RhinoFinder.FindRhino5_32bit(out path, out exeName);
@@ -158,11 +155,11 @@ namespace RCWizard
         }
       }
 
-      if (pluginname.Text == _replacements["$safeprojectname$"])
-        pluginname.Text = _replacements["$safeprojectname$"] + "PlugIn";
+      if (pluginname.Text == m_replacements["$safeprojectname$"])
+        pluginname.Text = m_replacements["$safeprojectname$"] + "PlugIn";
 
-      if (commandname.Text == _replacements["$safeprojectname$"])
-        commandname.Text = _replacements["$safeprojectname$"] + "Command";
+      if (commandname.Text == m_replacements["$safeprojectname$"])
+        commandname.Text = m_replacements["$safeprojectname$"] + "Command";
 
       if (commandname.Text == pluginname.Text)
         commandname.Text = pluginname.Text + "Command";
@@ -226,10 +223,8 @@ namespace RCWizard
       string path = string.Empty;
       try
       {
-        if (Environment.Is64BitProcess)
-          path = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
-        else
-          path = Environment.GetEnvironmentVariable("ProgramW6432");
+        path = Environment.Is64BitProcess ?
+          Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) : Environment.GetEnvironmentVariable("ProgramW6432");
       }
       catch { }
       return path;
@@ -272,30 +267,30 @@ namespace RCWizard
 
     private void FinalVariableSetup()
     {
-      _replacements["$pluginname$"] = pluginname.Text;
-      _replacements["$commandname$"] = commandname.Text;
+      m_replacements["$pluginname$"] = pluginname.Text;
+      m_replacements["$commandname$"] = commandname.Text;
 
-      _replacements["$rhinocommonURL$"] = rhinocommonpath.Text;
+      m_replacements["$rhinocommonURL$"] = rhinocommonpath.Text;
 
-      _replacements["$rhino5_32_checked$"] = rhino32.Checked ? "1" : "0";
-      _replacements["$rhino5_32_URL$"] = rhino32path.Text;
+      m_replacements["$rhino5_32_checked$"] = rhino32.Checked ? "1" : "0";
+      m_replacements["$rhino5_32_URL$"] = rhino32path.Text;
 
-      _replacements["$rhino5_64_checked$"] = rhino64.Checked ? "1" : "0";
-      _replacements["$rhino5_64_URL$"] = rhino64path.Text;
+      m_replacements["$rhino5_64_checked$"] = rhino64.Checked ? "1" : "0";
+      m_replacements["$rhino5_64_URL$"] = rhino64path.Text;
 
-      _replacements["$utility$"] = utility.Checked ? "1" : "0";
-      _replacements["$notutility$"] = utility.Checked ? "0" : "1";
-      _replacements["$digitizer$"] = digitizer.Checked ? "1" : "0";
-      _replacements["$rendering$"] = rendering.Checked ? "1" : "0";
-      _replacements["$import$"] = import.Checked ? "1" : "0";
-      _replacements["$export$"] = export.Checked ? "1" : "0";
+      m_replacements["$utility$"] = utility.Checked ? "1" : "0";
+      m_replacements["$notutility$"] = utility.Checked ? "0" : "1";
+      m_replacements["$digitizer$"] = digitizer.Checked ? "1" : "0";
+      m_replacements["$rendering$"] = rendering.Checked ? "1" : "0";
+      m_replacements["$import$"] = import.Checked ? "1" : "0";
+      m_replacements["$export$"] = export.Checked ? "1" : "0";
 
-      _replacements["$extension$"] = extension.Text.Replace(".", string.Empty);
-      _replacements["$description$"] = description.Text;
+      m_replacements["$extension$"] = extension.Text.Replace(".", string.Empty);
+      m_replacements["$description$"] = description.Text;
 
-      _replacements["$utilitywithsample$"] = (utility.Checked && commandsample.Checked) ? "1" : "0";
-      _replacements["$utilitywithoutsample$"] = (utility.Checked && (!commandsample.Checked)) ? "1" : "0";
-      _replacements["$plugintype$"] =
+      m_replacements["$utilitywithsample$"] = (utility.Checked && commandsample.Checked) ? "1" : "0";
+      m_replacements["$utilitywithoutsample$"] = (utility.Checked && (!commandsample.Checked)) ? "1" : "0";
+      m_replacements["$plugintype$"] =
         utility.Checked?"utility" : digitizer.Checked?"digitizer": import.Checked?"import": rendering.Checked?"rendering":"export";
     }
   }

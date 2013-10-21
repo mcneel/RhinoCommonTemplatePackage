@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Microsoft.Win32;
 using System.IO;
 
@@ -99,11 +97,11 @@ namespace RCWizard
     {
       try
       {
-        using (var registryKey = RegistryKey.OpenBaseKey(hive, view).OpenSubKey(keyName))
+        using (var registry_key = RegistryKey.OpenBaseKey(hive, view).OpenSubKey(keyName))
         {
-          if (registryKey != null)
+          if (registry_key != null)
           {
-            string value = registryKey.GetValue("InstallPath") as string;
+            string value = registry_key.GetValue("InstallPath") as string;
             if (!string.IsNullOrEmpty(value))
             {
               if (!installPaths.Contains(value))
