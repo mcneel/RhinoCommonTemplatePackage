@@ -212,4 +212,25 @@ Public Class $pluginclassname$ : Implements IZooPlugin
 
     Return New String(outputChars)
   End Function
+  
+    ''' <summary>
+    ''' We do not need to show any UI.
+    ''' If we wanted to, we could show it here before the key is passed over
+    ''' to <see cref="ValidateProductKey">ValidateProductKey</see>.
+    ''' </summary>
+    ''' <param name="productKey">The product, or CD, key to validate.
+    ''' This is the raw, unmodified product key string as entered into the
+    ''' Zoo Administrator console.</param>
+    ''' <param name="validatedKey">The modified productKey string.
+    ''' Again, in most cases you will set validatedKey equal productKey.
+    ''' This value will be passed to ValidateProductKey().</param>
+    ''' <returns>Return 0 on success; the output Message is ignored.
+    ''' Return any other number to indicate failure. The Zoo will call
+    ''' FormatErrorMessage with the value you return in order to get a
+    ''' human-readable error message for display and logging purposes.
+    ''' </returns>
+    Public Function ValidateProductKeyUI(productKey As String, ByRef validatedKey As String) As Integer Implements ZooPlugin.IZooPlugin.ValidateProductKeyUI
+        validatedKey = productKey
+        Return 0
+    End Function
 End Class
