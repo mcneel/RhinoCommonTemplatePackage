@@ -83,7 +83,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <VSTemplate Include="VBZooPlugIn.vstemplate" />
+    <VSTemplate Include="VBZooPlugIn.vstemplate">
+		<OutputSubPath>Rhinoceros</OutputSubPath>
+	</VSTemplate>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\VSSDK\Microsoft.VsSDK.targets" />

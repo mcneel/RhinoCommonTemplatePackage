@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
-    <Name>Zoo PlugIn</Name>
+    <Name>Zoo Plug-In</Name>
     <Description xml:space="preserve">A C# project to build a Rhino Zoo plugin.
 
 This requires Zoo 5.0 to be installed on your machine.

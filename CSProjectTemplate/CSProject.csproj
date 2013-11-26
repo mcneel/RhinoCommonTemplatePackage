@@ -61,7 +61,8 @@
   <ItemGroup>
     <VSTemplate Include="CSProject.vstemplate">
       <SubType>Designer</SubType>
-    </VSTemplate>
+      <OutputSubPath>Rhinoceros</OutputSubPath>
+	</VSTemplate>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\VSSDK\Microsoft.VsSDK.targets" />

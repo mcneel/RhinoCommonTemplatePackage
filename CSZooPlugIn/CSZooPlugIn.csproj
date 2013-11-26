@@ -57,7 +57,9 @@
     <None Include="ProjectTemplate.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <VSTemplate Include="CSZooPlugIn.vstemplate" />
+    <VSTemplate Include="CSZooPlugIn.vstemplate">
+		<OutputSubPath>Rhinoceros</OutputSubPath>
+	</VSTemplate>
   </ItemGroup>
   <ItemGroup>
     <None Include="icon.ico" />
