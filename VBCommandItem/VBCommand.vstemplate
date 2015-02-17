@@ -4,7 +4,7 @@
     <Name>Empty RhinoCommon Command</Name>
     <Description>A new RhinoCommon Command implemented in Vb.Net</Description>
     <Icon>icon.ico</Icon>
-    <TemplateID>7334cdf1-ec72-43f9-8349-a8d898b7e088</TemplateID>
+    <TemplateID>46AF52ED-F78B-4D60-AD75-9D9BF8191C6E</TemplateID>
     <SortOrder>-1000</SortOrder>
     <DefaultName>MyCommand.vb</DefaultName>
     <ProjectType>VisualBasic</ProjectType>

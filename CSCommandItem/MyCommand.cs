@@ -4,7 +4,6 @@ using Rhino.Commands;
 
 namespace $rootnamespace$
 {
-    [System.Runtime.InteropServices.Guid("$guid1$")]
     public class $safeitemrootname$ : Command
     {
         static $safeitemrootname$ _instance;

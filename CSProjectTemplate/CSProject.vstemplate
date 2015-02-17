@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
-    <Name>RhinoCommon Plug-In</Name>
+    <Name>RhinoCommon Plug-In for Rhinoceros 6</Name>
     <Description>A new RhinoCommon plug-in project that can be easily debugged and can automatically launch Rhino.</Description>
     <Icon>icon.ico</Icon>
     <ProjectType>CSharp</ProjectType>
     <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
     <SortOrder>1000</SortOrder>
-    <TemplateID>715730b5-3ff8-4a44-b2b6-18e20497fc3a</TemplateID>
+    <TemplateID>7ADB6134-BEBD-4561-8485-56269DF8FB74</TemplateID>
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>MyProject</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
@@ -21,7 +21,7 @@
     </Project>
   </TemplateContent>
   <WizardExtension>
-    <Assembly>RCWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9cbe2d392744cfe6</Assembly>
+    <Assembly>RCWizard_v6, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9cbe2d392744cfe6</Assembly>
     <FullClassName>RCWizard.CollectInformationWizard</FullClassName>
   </WizardExtension>
 </VSTemplate>

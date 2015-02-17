@@ -8,7 +8,6 @@ using Rhino.Input.Custom;
 
 namespace $safeprojectname$
 {
-    [System.Runtime.InteropServices.Guid("$guid2$")]
     public class $commandname$ : Command
     {
         public $commandname$()

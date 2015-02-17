@@ -7,83 +7,29 @@ namespace RCWizard
 {
   static class RhinoFinder
   {
-    const string rhinoExe = "Rhino.exe";
-    const string rhino4Exe = "Rhino4.exe";
-    const string rhino5Exe = "Rhino5.exe";
+    const string RhinoExe = "Rhino.exe";
 
-    public static bool FindRhino5_64bit(out string path, out string rhinoExeName)
+    public static bool FindRhino6(out string path, out string rhinoExeName)
     {
       var strings = new List<string>();
 
       if (Environment.Is64BitOperatingSystem)
       {
-        SearchRegistryKey(@"Software\McNeel\Rhinoceros\5.0x64\Install",
+        SearchRegistryKey(@"Software\McNeel\Rhinoceros\6.0\Install",
           RegistryHive.LocalMachine, RegistryView.Registry64, strings);
 
-        SearchRegistryKey(@"Software\McNeel\Rhinoceros\5.0x64\Install",
+        SearchRegistryKey(@"Software\McNeel\Rhinoceros\6.0\Install",
           RegistryHive.CurrentUser, RegistryView.Registry64, strings);
 
 
         foreach (var str in strings)
         {
           path = Path.Combine(str, "System");
-          if (File.Exists(Path.Combine(path, rhinoExe)))
+          if (File.Exists(Path.Combine(path, RhinoExe)))
           {
-            rhinoExeName = rhinoExe;
+            rhinoExeName = RhinoExe;
             return true;
           }
-
-          if (File.Exists(Path.Combine(path, rhino4Exe)))
-          {
-            rhinoExeName = rhino4Exe;
-            return true;
-          }
-
-          if (File.Exists(Path.Combine(path, rhino5Exe)))
-          {
-            rhinoExeName = rhino5Exe;
-            return true;
-          }
-        }
-      }
-
-      rhinoExeName = string.Empty; path = string.Empty; return false;
-    }
-
-    public static bool FindRhino5_32bit(out string path, out string rhinoExeName)
-    {
-      var strings = new List<string>();
-      SearchRegistryKey(@"Software\McNeel\Rhinoceros\5.0\Install",
-        RegistryHive.LocalMachine, RegistryView.Registry32, strings);
-
-      SearchRegistryKey(@"Software\Wow6432Node\McNeel\Rhinoceros\5.0\Install",
-        RegistryHive.LocalMachine, RegistryView.Registry32, strings);
-
-      SearchRegistryKey(@"Software\McNeel\Rhinoceros\5.0\Install",
-        RegistryHive.CurrentUser, RegistryView.Registry32, strings);
-
-      SearchRegistryKey(@"Software\Wow6432Node\McNeel\Rhinoceros\5.0\Install",
-        RegistryHive.CurrentUser, RegistryView.Registry32, strings);
-
-      foreach (var str in strings)
-      {
-        path = Path.Combine(str, "System");
-        if (File.Exists(Path.Combine(path, rhino4Exe)))
-        {
-          rhinoExeName = rhino4Exe;
-          return true;
-        }
-
-        if (File.Exists(Path.Combine(path, rhinoExe))) // In case we change out minds later...
-        {
-          rhinoExeName = rhinoExe;
-          return true;
-        }
-
-        if (File.Exists(Path.Combine(path, rhino5Exe)))
-        {
-          rhinoExeName = rhino5Exe;
-          return true;
         }
       }
 
@@ -97,11 +43,11 @@ namespace RCWizard
     {
       try
       {
-        using (var registry_key = RegistryKey.OpenBaseKey(hive, view).OpenSubKey(keyName))
+        using (var registryKey = RegistryKey.OpenBaseKey(hive, view).OpenSubKey(keyName))
         {
-          if (registry_key != null)
+          if (registryKey != null)
           {
-            string value = registry_key.GetValue("InstallPath") as string;
+            string value = registryKey.GetValue("InstallPath") as string;
             if (!string.IsNullOrEmpty(value))
             {
               if (!installPaths.Contains(value))

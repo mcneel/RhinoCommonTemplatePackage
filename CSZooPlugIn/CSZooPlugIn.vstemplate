@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
   <TemplateData>
-    <Name>Zoo Plug-In</Name>
+    <Name>Zoo Plug-In for Rhinoceros 6</Name>
     <Description xml:space="preserve">A C# project to build a Rhino Zoo plugin.
 
 This requires Zoo 5.0 to be installed on your machine.
@@ -10,7 +10,7 @@ Also, remember to copy the ID from your Rhinoceros plug-in before continuing.</D
     <ProjectType>CSharp</ProjectType>
     <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
     <SortOrder>1000</SortOrder>
-    <TemplateID>eda9e98f-d47f-442a-b9e6-910d8a7137e2</TemplateID>
+    <TemplateID>B5982A38-37B5-4797-B1A7-27F98826C791</TemplateID>
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>MyZooPlugIn</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
@@ -22,7 +22,7 @@ Also, remember to copy the ID from your Rhinoceros plug-in before continuing.</D
     </Project>
   </TemplateContent>
   <WizardExtension>
-    <Assembly>ZooWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9cbe2d392744cfe6</Assembly>
+    <Assembly>ZooWizard_v6, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9cbe2d392744cfe6</Assembly>
     <FullClassName>ZooWizard.CollectInformationWizard</FullClassName>
   </WizardExtension>
 </VSTemplate>

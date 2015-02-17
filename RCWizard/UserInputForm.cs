@@ -25,23 +25,21 @@ namespace RCWizard
         pluginname.Text = m_replacements["$safeprojectname$"] + "PlugIn";
         commandname.Text = m_replacements["$safeprojectname$"] + "Command";
 
-        string path, exeName;
-        bool ok32 = RhinoFinder.FindRhino5_32bit(out path, out exeName);
-        rhino32path.Text = Path.Combine(path, exeName);
-        rhino32.Checked = ok32;
-
-        string path32 = path;
-        bool ok64 = RhinoFinder.FindRhino5_64bit(out path, out exeName);
-        rhino64path.Text = Path.Combine(path, exeName);
+        string path, exe_name;
+        
+        bool ok64 = RhinoFinder.FindRhino6(out path, out exe_name);
+        rhino64path.Text = Path.Combine(path, exe_name);
         rhino64.Checked = ok64;
 
         if (File.Exists(Path.Combine(path, "rhinocommon.dll")))
-          rhinocommonpath.Text = Path.Combine(path, "rhinocommon.dll");
-        else if (File.Exists(Path.Combine(path32, "rhinocommon.dll")))
-          rhinocommonpath.Text = Path.Combine(path32, "rhinocommon.dll");
+        {
+          UpdateRhinoCommonBasedPaths(Path.Combine(path, "rhinocommon.dll"));
+        }
         else
         {
           rhinocommonpath.Text = "Please select a path to RhinoCommon.dll to continue.";
+          etopath.Text = string.Empty;
+          rhinouipath.Text = string.Empty;
           rhinocommonpath.ForeColor = Color.Red;
         }
 
@@ -56,22 +54,19 @@ namespace RCWizard
         }
       }
 
-      Font f = new Font(rhinocommonpath.Font.FontFamily,
+      var font = new Font(rhinocommonpath.Font.FontFamily,
         rhinocommonpath.Font.Size * 0.84f, rhinocommonpath.Font.Style, rhinocommonpath.Font.Unit, rhinocommonpath.Font.GdiCharSet);
-      rhinocommonpath.Font = f;
-      rhino32path.Font = f;
-      rhino64path.Font = f;
-      eitheronetext.Font = f;
+      rhinocommonpath.Font = font;
+      rhino64path.Font = font;
+      eitheronetext.Font = font;
+      etopath.Font = font;
+      rhinouipath.Font = font;
     }
 
     protected UserInputForm() : this(null)
     {
       if (!DesignMode)
         throw new NotSupportedException("This constructor is only for design.");
-    }
-
-    private void finishButton_Click(object sender, EventArgs e)
-    {
     }
 
     protected override void OnClosing(CancelEventArgs e)
@@ -82,14 +77,11 @@ namespace RCWizard
 
     private void EnableOrDisableContinue()
     {
-      bool either32or64isChecked = rhino32.Checked || rhino64.Checked;
-
-      eitheronetext.Visible = !either32or64isChecked;
+      eitheronetext.Visible = !rhino64.Checked;
 
       finish.Enabled =
         IsTextBoxAllRight(pluginname) && IsTextBoxAllRight(commandname) &&
-        either32or64isChecked &&
-        (rhino32.Checked ? File.Exists(rhino32path.Text) : true) &&
+        rhino64.Checked &&
         (rhino64.Checked ? File.Exists(rhino64path.Text) : true) &&
         File.Exists(rhinocommonpath.Text);
     }
@@ -99,24 +91,24 @@ namespace RCWizard
       return !string.IsNullOrEmpty(tb.Text);
     }
 
-    private void import_CheckedChanged(object sender, EventArgs e)
+    private void ImportCheckedChanged(object sender, EventArgs e)
     {
-      EnableDisable_import_export();
+      this.EnableDisableImportExport();
     }
 
-    private void export_CheckedChanged(object sender, EventArgs e)
+    private void ExportCheckedChanged(object sender, EventArgs e)
     {
-      EnableDisable_import_export();
+      this.EnableDisableImportExport();
     }
 
-    private void EnableDisable_import_export()
+    private void EnableDisableImportExport()
     {
       bool enabled = import.Checked || export.Checked;
       extension.Enabled = enabled;
       description.Enabled = enabled;
     }
 
-    private void exotericplugins_Click(object sender, EventArgs e)
+    private void ExotericPluginsClick(object sender, EventArgs e)
     {
       digitizer.Visible =
       rendering.Visible =
@@ -134,24 +126,24 @@ namespace RCWizard
       commandsample.Location -= new Size(0, 32);
     }
 
-    private void utility_CheckedChanged(object sender, EventArgs e)
+    private void UtilityCheckedChanged(object sender, EventArgs e)
     {
       commandsample.Enabled = utility.Checked;
     }
 
-    private void eithertextbox_TextChanged(object sender, EventArgs e)
+    private void EithertextboxTextChanged(object sender, EventArgs e)
     {
-      TextBox realSender = sender as TextBox;
+      var real_sender = sender as TextBox;
 
-      if (realSender != null)
+      if (real_sender != null)
       {
-        string text = realSender.Text;
+        string text = real_sender.Text;
 
         const string pattern = "^[^A-Za-z]+|[^A-Za-z0-9]+"; //finds bad chars at beginning or around
         if (Regex.IsMatch(text, pattern))
         {
           text = Regex.Replace(text, pattern, string.Empty);
-          realSender.Text = text;
+          real_sender.Text = text;
         }
       }
 
@@ -167,12 +159,7 @@ namespace RCWizard
       EnableOrDisableContinue();
     }
 
-    private void rhino32_CheckedChanged(object sender, EventArgs e)
-    {
-      EnableDisablePath(rhino32, rhino32path, rhino32browse);
-    }
-
-    private void rhino64_CheckedChanged(object sender, EventArgs e)
+    private void Rhino64CheckedChanged(object sender, EventArgs e)
     {
       EnableDisablePath(rhino64, rhino64path, rhino64browse);
     }
@@ -191,31 +178,17 @@ namespace RCWizard
       EnableOrDisableContinue();
     }
 
-    private void rhino32browse_Click(object sender, EventArgs e)
+    private void Rhino64BrowseClick(object sender, EventArgs e)
     {
-      string startAt = File.Exists(rhino32path.Text) ? rhino32path.Text :
-        Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
+      var start_at = File.Exists(rhino64path.Text) ? rhino64path.Text : Get64BitPath();
 
       string location;
-      if (GetLocation("Rhino 5 32-bit executable", "Rhino4.exe", startAt, out location))
-      {
-        rhino32path.Text = location;
-        rhino32.Checked = true;
-        EnableOrDisableContinue();
-      }
-    }
+      if (!GetLocation("Rhino 5 64-bit executable", "Rhino.exe", start_at, out location))
+        return;
 
-    private void rhino64browse_Click(object sender, EventArgs e)
-    {
-      string startAt = File.Exists(rhino64path.Text) ? rhino64path.Text : Get64BitPath();
-
-      string location;
-      if (GetLocation("Rhino 5 64-bit executable", "Rhino.exe", startAt, out location))
-      {
-        rhino64path.Text = location;
-        rhino64.Checked = true;
-        EnableOrDisableContinue();
-      }
+      this.rhino64path.Text = location;
+      this.rhino64.Checked = true;
+      this.EnableOrDisableContinue();
     }
 
     private static string Get64BitPath()
@@ -226,21 +199,38 @@ namespace RCWizard
         path = Environment.Is64BitProcess ?
           Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) : Environment.GetEnvironmentVariable("ProgramW6432");
       }
-      catch { }
+      catch (Exception)
+      { }
       return path;
     }
 
-    private void browseRhinocommon_Click(object sender, EventArgs e)
+    private void BrowseRhinocommonClick(object sender, EventArgs e)
     {
-      string startAt = File.Exists(rhinocommonpath.Text) ? rhinocommonpath.Text :
+      var start_at = File.Exists(rhinocommonpath.Text) ? rhinocommonpath.Text :
         Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
 
       string location;
-      if (GetLocation("RhinoCommon library", "RhinoCommon.dll", startAt, out location))
+      if (GetLocation("RhinoCommon library", "RhinoCommon.dll", start_at, out location))
       {
-        rhinocommonpath.Text = location;
-        rhinocommonpath.ForeColor = SystemColors.ControlDark;
+        UpdateRhinoCommonBasedPaths(location);
+        
         EnableOrDisableContinue();
+      }
+    }
+
+    private void UpdateRhinoCommonBasedPaths(string rhinocommonLocation)
+    {
+      rhinocommonpath.Text = rhinocommonLocation;
+      rhinocommonpath.ForeColor = SystemColors.ControlDark;
+
+      var dir = Path.GetDirectoryName(rhinocommonLocation);
+      if (dir != null)
+      {
+        etopath.Text = Path.Combine(dir, "Eto.dll");
+        rhinouipath.ForeColor = SystemColors.ControlDark;
+
+        rhinouipath.Text = Path.Combine(dir, "Rhino.UI.dll");
+        rhinouipath.ForeColor = SystemColors.ControlDark;
       }
     }
 
@@ -271,9 +261,8 @@ namespace RCWizard
       m_replacements["$commandname$"] = commandname.Text;
 
       m_replacements["$rhinocommonURL$"] = rhinocommonpath.Text;
-
-      m_replacements["$rhino5_32_checked$"] = rhino32.Checked ? "1" : "0";
-      m_replacements["$rhino5_32_URL$"] = rhino32path.Text;
+      m_replacements["$etoURL$"] = etopath.Text;
+      m_replacements["$rhinouiURL$"] = rhinouipath.Text;
 
       m_replacements["$rhino5_64_checked$"] = rhino64.Checked ? "1" : "0";
       m_replacements["$rhino5_64_URL$"] = rhino64path.Text;

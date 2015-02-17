@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Robert McNeel & Associates")]
 [assembly: AssemblyProduct("RhinoCommonWizard")]
-[assembly: AssemblyCopyright("Copyright © Robert McNeel & Associates 2013")]
+[assembly: AssemblyCopyright("Copyright © Robert McNeel & Associates 2013-2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
