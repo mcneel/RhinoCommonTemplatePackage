@@ -7,7 +7,7 @@
     <Description xml:space="preserve">Adds plug-in, command and zoo wizards for RhinoCommon projects. This includes digitizer, render, import and export plug-ins. Makes setting up debugging easier and automatically references RhinoCommon.dll. Rhinoceros 6 is a requirement for this wizard to operate correctly.
 
 For more information about RhinoCommon, see the Rhino wiki website at
-http://wiki.mcneel.com/developer/rhinocommon .
+http://www.rhino3d.com/go/rhinocommon_guide .
 
 For support about this wizard, contact the Rhino Developer Newsgroup, news://news.rhino3d.com/rhino or email giulio@mcneel.com.
 
@@ -15,7 +15,7 @@ Copyright (c) 2015 Robert McNeel and Associates. All rights reserved.</Descripti
     <Locale>1033</Locale>
     <MoreInfoUrl>http://visualstudiogallery.msdn.microsoft.com/16053049-7db2-4c9f-961a-53274ac92ace</MoreInfoUrl>
     <License>license.rtf</License>
-    <GettingStartedGuide>http://wiki.mcneel.com/developer/rhinocommon</GettingStartedGuide>
+    <GettingStartedGuide>http://www.rhino3d.com/go/rhinocommon_guide</GettingStartedGuide>
     <Icon>icon.ico</Icon>
     <PreviewImage>rhino.png</PreviewImage>
     <InstalledByMsi>false</InstalledByMsi>
