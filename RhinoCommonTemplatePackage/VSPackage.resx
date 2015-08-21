@@ -133,10 +133,10 @@
   </data>
   <data name="112" xml:space="preserve">
     <value>For more information about RhinoCommon, see the Rhino wiki website at
-http://wiki.mcneel.com/developer/rhinocommon
+http://www.rhino3d.com/go/rhinocommon_guide
 
 For customer support, contact the Rhino Developer Newsgroup
-Copyright (c) 2011 Robert McNeel and Associates</value>
+Copyright (c) 2011-2015 Robert McNeel and Associates</value>
   </data>
   <data name="400" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Package.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
