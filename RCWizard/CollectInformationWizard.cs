@@ -37,6 +37,7 @@ namespace RCWizard
       try
       {
         UserInputForm input_form = new UserInputForm(replacementsDictionary);
+        replacementsDictionary["$targetframeworkversion$"] = "4.5";
         should_add = input_form.ShowDialog() == DialogResult.OK;
       }
       catch (Exception ex)
