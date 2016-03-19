@@ -64,7 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RhinoFinder.cs" />
+    <Compile Include="ZooFinder.cs" />
     <Compile Include="UserInputForm.cs">
       <SubType>Form</SubType>
     </Compile>

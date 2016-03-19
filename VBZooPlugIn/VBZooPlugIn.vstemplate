@@ -3,7 +3,7 @@
     <Name>Zoo Plug-In for Rhinoceros 6</Name>
     <Description xml:space="preserve">A Vb.Net project to build a Rhino Zoo plugin.
 
-This requires Zoo 5.0 to be installed on your machine.
+This requires Zoo 6.0 to be installed on your machine.
 Also, remember to copy the ID from your Rhinoceros plug-in before continuing.</Description>
     <Icon>icon.ico</Icon>
     <ProjectType>VisualBasic</ProjectType>

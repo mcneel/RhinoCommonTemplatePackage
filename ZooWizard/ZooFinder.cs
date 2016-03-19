@@ -5,7 +5,7 @@ namespace ZooWizard
 {
   static class ZooFinder
   {
-    const string ZOO_DIR = "Zoo 5.0";
+    const string ZOO_DIR = "Zoo 6";
     const string ZOO_DLL = "ZooPlugin.dll";
 
     public static void FindZooDll(out string path, out string dllName)

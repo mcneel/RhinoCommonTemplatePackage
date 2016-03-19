@@ -4,7 +4,7 @@
     <Name>Zoo Plug-In for Rhinoceros 6</Name>
     <Description xml:space="preserve">A C# project to build a Rhino Zoo plugin.
 
-This requires Zoo 5.0 to be installed on your machine.
+This requires Zoo 6.0 to be installed on your machine.
 Also, remember to copy the ID from your Rhinoceros plug-in before continuing.</Description>
     <Icon>icon.ico</Icon>
     <ProjectType>CSharp</ProjectType>
@@ -22,7 +22,7 @@ Also, remember to copy the ID from your Rhinoceros plug-in before continuing.</D
     </Project>
   </TemplateContent>
   <WizardExtension>
-    <Assembly>ZooWizard_v6, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9cbe2d392744cfe6</Assembly>
+    <Assembly>ZooWizardNew, Version=6.0.0.0, Culture=neutral, PublicKeyToken=9cbe2d392744cfe6</Assembly>
     <FullClassName>ZooWizard.CollectInformationWizard</FullClassName>
   </WizardExtension>
 </VSTemplate>
