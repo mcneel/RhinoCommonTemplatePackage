@@ -11,8 +11,8 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyTitle("VBProjectTemplate")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("VBProjectTemplate")> 
-<Assembly: AssemblyCopyright("Copyright ©  2011")> 
+<Assembly: AssemblyProduct("VBProjectTemplate")>
+<Assembly: AssemblyCopyright("Copyright © Robert McNeel & Associates 2016")>
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>

@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RhinoCommonTemplatePackage"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSProject", "CSProjectTemplate\CSProject.csproj", "{3B988238-6FA2-4F74-98AF-691FB9549C65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RCWizard", "RCWizard\RCWizard.csproj", "{EED8E973-3E36-4C9D-94B6-402EC5DE82A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RCWizardNew", "RCWizard\RCWizardNew.csproj", "{EED8E973-3E36-4C9D-94B6-402EC5DE82A7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSCommand", "CSCommandItem\CSCommand.csproj", "{1508312D-9AC5-42DB-BCAB-1DF801FE9A72}"
 EndProject
@@ -15,7 +15,7 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VBProject", "VBProjectTempl
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VBCommand", "VBCommandItem\VBCommand.vbproj", "{57171780-2847-4BAA-9FD8-8C51D3D75989}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooWizard", "ZooWizard\ZooWizard.csproj", "{79D3F8D0-FE2A-4ABC-B202-7514E832EA08}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooWizardNew", "ZooWizard\ZooWizardNew.csproj", "{79D3F8D0-FE2A-4ABC-B202-7514E832EA08}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSZooPlugIn", "CSZooPlugIn\CSZooPlugIn.csproj", "{9285F07F-5234-4E9E-8FEE-6A1DE13F2024}"
 EndProject

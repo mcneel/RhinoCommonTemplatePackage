@@ -188,9 +188,9 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <VSIXSubPath>ProjectTemplates</VSIXSubPath>
     </ProjectReference>
-    <ProjectReference Include="..\RCWizard\RCWizard.csproj">
+    <ProjectReference Include="..\RCWizard\RCWizardNew.csproj">
       <Project>{EED8E973-3E36-4C9D-94B6-402EC5DE82A7}</Project>
-      <Name>RCWizard</Name>
+      <Name>RCWizardNew</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3b</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
@@ -218,9 +218,9 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <VSIXSubPath>ProjectTemplates</VSIXSubPath>
     </ProjectReference>
-    <ProjectReference Include="..\ZooWizard\ZooWizard.csproj">
+    <ProjectReference Include="..\ZooWizard\ZooWizardNew.csproj">
       <Project>{79D3F8D0-FE2A-4ABC-B202-7514E832EA08}</Project>
-      <Name>ZooWizard</Name>
+      <Name>ZooWizardNew</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3b</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>

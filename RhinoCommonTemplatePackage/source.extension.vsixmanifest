@@ -31,8 +31,8 @@ Copyright (c) 2016 Robert McNeel and Associates. All rights reserved.</Descripti
   </Identifier>
   <References />
   <Content>
-    <Assembly AssemblyName="|RCWizard;AssemblyName|">|RCWizard|</Assembly>
-    <Assembly AssemblyName="|ZooWizard;AssemblyName|">|ZooWizard|</Assembly>
+    <Assembly AssemblyName="|RCWizardNew;AssemblyName|">|RCWizardNew|</Assembly>
+    <Assembly AssemblyName="|ZooWizardNew;AssemblyName|">|ZooWizardNew|</Assembly>
     <ProjectTemplate>ProjectTemplates</ProjectTemplate>
     <ItemTemplate>ItemTemplates</ItemTemplate>
   </Content>
