@@ -29,7 +29,7 @@ namespace RCWizard
         
         bool ok64 = RhinoFinder.FindRhino6(out path, out exe_name);
         rhino64path.Text = Path.Combine(path, exe_name);
-        rhino64.Checked = ok64;
+        rhinoExe.Checked = ok64;
 
         if (File.Exists(Path.Combine(path, "rhinocommon.dll")))
         {
@@ -47,7 +47,7 @@ namespace RCWizard
 
         if (!Environment.Is64BitOperatingSystem)
         {
-          rhino64.Enabled = false;
+          rhinoExe.Enabled = false;
           rhino64browse.Visible = false;
           rhino64path.Enabled = false;
           rhino64path.Text = "This operating system is 32-bit.";
@@ -77,12 +77,12 @@ namespace RCWizard
 
     private void EnableOrDisableContinue()
     {
-      eitheronetext.Visible = !rhino64.Checked;
+      eitheronetext.Visible = !rhinoExe.Checked;
 
       finish.Enabled =
         IsTextBoxAllRight(pluginname) && IsTextBoxAllRight(commandname) &&
-        rhino64.Checked &&
-        (rhino64.Checked ? File.Exists(rhino64path.Text) : true) &&
+        rhinoExe.Checked &&
+        (rhinoExe.Checked ? File.Exists(rhino64path.Text) : true) &&
         File.Exists(rhinocommonpath.Text);
     }
 
@@ -161,7 +161,7 @@ namespace RCWizard
 
     private void Rhino64CheckedChanged(object sender, EventArgs e)
     {
-      EnableDisablePath(rhino64, rhino64path, rhino64browse);
+      EnableDisablePath(rhinoExe, rhino64path, rhino64browse);
     }
 
     private void EnableDisablePath(CheckBox rhino, Label path, Button browse)
@@ -187,7 +187,7 @@ namespace RCWizard
         return;
 
       this.rhino64path.Text = location;
-      this.rhino64.Checked = true;
+      this.rhinoExe.Checked = true;
       this.EnableOrDisableContinue();
     }
 
@@ -264,7 +264,7 @@ namespace RCWizard
       m_replacements["$etoURL$"] = etopath.Text;
       m_replacements["$rhinouiURL$"] = rhinouipath.Text;
 
-      m_replacements["$rhino5_64_checked$"] = rhino64.Checked ? "1" : "0";
+      m_replacements["$rhino5_64_checked$"] = rhinoExe.Checked ? "1" : "0";
       m_replacements["$rhino5_64_URL$"] = rhino64path.Text;
 
       m_replacements["$utility$"] = utility.Checked ? "1" : "0";
