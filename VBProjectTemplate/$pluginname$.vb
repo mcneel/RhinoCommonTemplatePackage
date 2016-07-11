@@ -139,6 +139,6 @@ $endif$
 
         ' You can override methods here to change the plug-in behavior on
         ' loading and shut down, add options pages to the Rhino _Option command
-        ' and mantain plug-in wide options in a document.
+        ' and maintain plug-in wide options in a document.
     End Class
 End Namespace
