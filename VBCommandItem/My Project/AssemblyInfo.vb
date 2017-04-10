@@ -8,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("VBCommandItem")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("VBCommandItem")> 
-<Assembly: AssemblyCopyright("Copyright ©  2011")> 
-<Assembly: AssemblyTrademark("")> 
+<Assembly: AssemblyTitle("VBCommandItem")>
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyCompany("Company")>
+<Assembly: AssemblyProduct("VBCommandItem")>
+<Assembly: AssemblyCopyright("Copyright © Company 2017")>
+<Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("378becc6-08fd-419f-a436-a88cd12445f0")> 
+<Assembly: Guid("bf8027cf-f5aa-4648-ab84-761b2e574d54")>
 
 ' Version information for an assembly consists of the following four values:
 '
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.0.0.0")> 
-<Assembly: AssemblyFileVersion("1.0.0.0")> 
+<Assembly: AssemblyVersion("1.0.0.0")>
+<Assembly: AssemblyFileVersion("1.0.0.0")>

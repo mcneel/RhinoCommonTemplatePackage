@@ -1,23 +1,22 @@
 ﻿<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
-    <Name>Zoo Plug-In for Rhinoceros 6</Name>
-    <Description xml:space="preserve">A Vb.Net project to build a Rhino Zoo plugin.
-
-This requires Zoo 6.0 to be installed on your machine.
-Also, remember to copy the ID from your Rhinoceros plug-in before continuing.</Description>
+    <Name>RhinoCommon Plug-In for Rhinoceros 6</Name>
+    <Description>A new RhinoCommon plug-in project that can be easily debugged and can automatically launch Rhino</Description>
     <Icon>icon.ico</Icon>
     <ProjectType>VisualBasic</ProjectType>
-    <TemplateID>92DA383A-B493-425E-A99F-B2D9993C97ED</TemplateID>
+    <TemplateID>F5DE5B3A-482E-4426-B070-7E95D4B1D49D</TemplateID>
     <SortOrder>1000</SortOrder>
     <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
     <CreateNewFolder>true</CreateNewFolder>
-    <DefaultName>VBZooPlugIn</DefaultName>
+    <DefaultName>VBProjectTemplate</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
     <RequiredFrameworkVersion>4.5</RequiredFrameworkVersion>
   </TemplateData>
   <TemplateContent>
     <Project File="ProjectTemplate.vbproj" ReplaceParameters="true">
-      <ProjectItem ReplaceParameters="true" OpenInEditor="true" OpenOrder="10">$pluginclassname$.vb</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true" OpenOrder="10">$commandname$.vb</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true" OpenOrder="10">$pluginname$.vb</ProjectItem>
+      
       <ProjectItem ReplaceParameters="true" TargetFileName="My Project\AssemblyInfo.vb">AssemblyInfo.vb</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="My Project\Application.myapp">MyApplication.myapp</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="My Project\Application.Designer.vb">MyApplication.Designer.vb</ProjectItem>

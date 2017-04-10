@@ -8,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("VBProjectTemplate")> 
-<Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("")> 
+<Assembly: AssemblyTitle("VBProjectTemplate")>
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyCompany("Company")>
 <Assembly: AssemblyProduct("VBProjectTemplate")>
-<Assembly: AssemblyCopyright("Copyright © Robert McNeel & Associates 2016")>
-<Assembly: AssemblyTrademark("")> 
+<Assembly: AssemblyCopyright("Copyright © Company 2017")>
+<Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("67a30cb6-e5e6-4c90-b5b2-4170e52a7437")> 
+<Assembly: Guid("e112fcfd-cc21-475f-9964-c7348d3515a7")>
 
 ' Version information for an assembly consists of the following four values:
 '
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.0.0.0")> 
-<Assembly: AssemblyFileVersion("1.0.0.0")> 
+<Assembly: AssemblyVersion("1.0.0.0")>
+<Assembly: AssemblyFileVersion("1.0.0.0")>

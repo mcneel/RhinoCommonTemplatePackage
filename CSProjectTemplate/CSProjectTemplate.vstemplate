@@ -1,29 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
-    <Name>Zoo Plug-In for Rhinoceros 6</Name>
-    <Description xml:space="preserve">A C# project to build a Rhino Zoo plugin.
-
-This requires Zoo 6.0 to be installed on your machine.
-Also, remember to copy the ID from your Rhinoceros plug-in before continuing.</Description>
+    <Name>RhinoCommon Plug-In for Rhinoceros 6</Name>
+    <Description>A new RhinoCommon plug-in project that can be easily debugged and can automatically launch Rhino</Description>
     <Icon>icon.ico</Icon>
     <ProjectType>CSharp</ProjectType>
     <RequiredFrameworkVersion>4.5</RequiredFrameworkVersion>
     <SortOrder>1000</SortOrder>
-    <TemplateID>B5982A38-37B5-4797-B1A7-27F98826C791</TemplateID>
+    <TemplateID>7ADB6134-BEBD-4561-8485-56269DF8FB74</TemplateID>
     <CreateNewFolder>true</CreateNewFolder>
-    <DefaultName>CSZooPlugIn</DefaultName>
+    <DefaultName>CSProjectTemplate</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
   </TemplateData>
   <TemplateContent>
     <Project File="ProjectTemplate.csproj" ReplaceParameters="true">
       <ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
-      <ProjectItem ReplaceParameters="true" OpenInEditor="true">$pluginclassname$.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true" OpenOrder="1">$commandname$.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true" OpenOrder="2">$pluginname$.cs</ProjectItem>
     </Project>
   </TemplateContent>
-
   <WizardExtension>
     <Assembly>NewRhinoCommonTemplate, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=9cbe2d392744cfe6</Assembly>
     <FullClassName>NewRhinoCommonTemplate.CollectInformationWizard</FullClassName>
   </WizardExtension>
+
 </VSTemplate>

@@ -7,7 +7,7 @@ Namespace $rootnamespace$
     Public Class $safeitemrootname$
     Inherits Command
 
-        Shared _instance As $safeitemrootname$ 
+    Shared _instance As $safeitemrootname$ 
 
     Public Sub New()
       ' Rhino only creates one instance of each command class defined in a
@@ -16,7 +16,7 @@ Namespace $rootnamespace$
     End Sub
 
     '''<summary>The only instance of this command.</summary>
-        Public Shared ReadOnly Property Instance() As $safeitemrootname$
+    Public Shared ReadOnly Property Instance() As $safeitemrootname$
       Get
         Return _instance
       End Get
