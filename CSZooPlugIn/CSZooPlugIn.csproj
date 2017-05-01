@@ -64,6 +64,7 @@
   <ItemGroup>
     <VSTemplate Include="CSZooPlugIn.vstemplate">
       <SubType>Designer</SubType>
+	  <OutputSubPath>Rhinoceros</OutputSubPath>
     </VSTemplate>
   </ItemGroup>
   <ItemGroup>

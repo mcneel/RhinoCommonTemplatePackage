@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="NewRhinoCommonTemplate.Company.5abbf1bd-bcba-4248-b5ac-1e33f0dd7ba6" Version="1.0" Language="en-US" Publisher="Company" />
-    <DisplayName>NewRhinoCommonTemplate</DisplayName>
-    <Description>Empty VSIX Project.</Description>
+    <Identity Id="RhinoCommonTemplate.RobertMcNeelAndAssociates.3F54AA95-00EA-4C83-A877-96C1EE1789EE" Version="6.1.0.2" Language="en-US" Publisher="Robert McNeel &amp; Associates" />
+    <DisplayName>RhinoCommon templates for v6</DisplayName>
+    <Description xml:space="preserve">Adds plug-in, command and zoo wizards for RhinoCommon projects. This includes digitizer, render, import and export plug-ins. Makes setting up debugging easier and automatically references RhinoCommon.dll. Rhinoceros 6 is a requirement for this wizard to operate correctly.
+
+For more information about RhinoCommon, see the Rhino wiki website at
+http://www.rhino3d.com/go/rhinocommon_guide .
+
+For support about this wizard, write on the McNeel Discourse website, http://discourse.mcneel.com/ or email giulio@mcneel.com.
+
+Copyright (c) 2016 Robert McNeel and Associates. All rights reserved.</Description>
+    <License>license.rtf</License>
+    <GettingStartedGuide>http://www.rhino3d.com/go/rhinocommon_guide</GettingStartedGuide>
+    <Icon>icon.ico</Icon>
+    <PreviewImage>rhino.png</PreviewImage>
+    <Tags>rhinocommon grasshopper</Tags>
   </Metadata>
   <Installation>
-    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0]" />
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0,15.0]" />
   </Installation>
   <Dependencies>
     <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />

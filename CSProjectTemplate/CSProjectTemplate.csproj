@@ -63,7 +63,9 @@
     <None Include="ProjectTemplate.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <VSTemplate Include="CSProjectTemplate.vstemplate" />
+    <VSTemplate Include="CSProjectTemplate.vstemplate">
+		<OutputSubPath>Rhinoceros</OutputSubPath>
+	</VSTemplate>
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />

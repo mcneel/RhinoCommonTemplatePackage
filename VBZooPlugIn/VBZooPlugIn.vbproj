@@ -79,7 +79,9 @@
     <None Include="Settings.settings" />
   </ItemGroup>
   <ItemGroup>
-    <VSTemplate Include="VBZooPlugIn.vstemplate" />
+    <VSTemplate Include="VBZooPlugIn.vstemplate">
+		<OutputSubPath>Rhinoceros</OutputSubPath>
+	</VSTemplate>
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
