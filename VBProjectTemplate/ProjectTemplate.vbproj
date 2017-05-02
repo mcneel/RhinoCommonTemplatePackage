@@ -114,10 +114,8 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>
-      Copy "$(TargetPath)" "$(TargetDir)$(ProjectName).rhp"
-      Erase "$(TargetPath)"
-    </PostBuildEvent>
+    <PostBuildEvent>Copy "$(TargetPath)" "$(TargetDir)$(ProjectName).rhp"
+Erase "$(TargetPath)"</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <FallbackCulture>en-US</FallbackCulture>
