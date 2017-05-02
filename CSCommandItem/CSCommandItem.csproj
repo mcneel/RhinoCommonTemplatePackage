@@ -60,7 +60,9 @@
     <None Include="MyCommand.cs" />
   </ItemGroup>
   <ItemGroup>
-    <VSTemplate Include="CSCommandItem.vstemplate" />
+    <VSTemplate Include="CSCommandItem.vstemplate">
+		<OutputSubPath>Rhinoceros</OutputSubPath>
+	</VSTemplate>
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />

@@ -71,7 +71,9 @@
     <None Include="MyCommand.vb" />
   </ItemGroup>
   <ItemGroup>
-    <VSTemplate Include="VBCommandItem.vstemplate" />
+    <VSTemplate Include="VBCommandItem.vstemplate">
+		<OutputSubPath>Rhinoceros</OutputSubPath>
+	</VSTemplate>
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
