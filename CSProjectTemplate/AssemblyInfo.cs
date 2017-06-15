@@ -1,6 +1,18 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using Rhino.PlugIns;
+
+// Plug-in Description Attributes - all of these are optional
+// These will show in Rhino's option dialog, in the tab Plug-ins
+[assembly: PlugInDescription(DescriptionType.Address, "-")]
+[assembly: PlugInDescription(DescriptionType.Country, "-")]
+[assembly: PlugInDescription(DescriptionType.Email, "-")]
+[assembly: PlugInDescription(DescriptionType.Phone, "-")]
+[assembly: PlugInDescription(DescriptionType.Fax, "-")]
+[assembly: PlugInDescription(DescriptionType.Organization, "-")]
+[assembly: PlugInDescription(DescriptionType.UpdateUrl, "-")]
+[assembly: PlugInDescription(DescriptionType.WebSite, "-")]
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
@@ -20,7 +32,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("$guid1$")]
+[assembly: Guid("$guid1$")] // This will also be the Guid of the Rhino plug-in
 
 // Version information for an assembly consists of the following four values:
 //
@@ -34,3 +46,6 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+
+// Make compatible with Rhino Installer Engine
+[assembly: AssemblyInformationalVersion("2")]
