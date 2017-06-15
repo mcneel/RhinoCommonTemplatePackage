@@ -1,6 +1,7 @@
 ﻿Imports System
 Imports System.Reflection
 Imports System.Runtime.InteropServices
+Imports Rhino.PlugIns
 
 ' Plug-in Description Attributes - all of these are optional
 ' These will show in Rhino's option dialog, in the tab Plug-ins
