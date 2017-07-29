@@ -64,11 +64,17 @@
   </ItemGroup>
   <ItemGroup>
     <VSTemplate Include="CSProjectTemplate.vstemplate">
-		<OutputSubPath>Rhinoceros</OutputSubPath>
-	</VSTemplate>
+      <OutputSubPath>Rhinoceros</OutputSubPath>
+      <SubType>Designer</SubType>
+    </VSTemplate>
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <Content Include="plugin-digitize.ico" />
+    <Content Include="plugin-export.ico" />
+    <Content Include="plugin-import.ico" />
+    <Content Include="plugin-render.ico" />
+    <Content Include="plugin-utility.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />

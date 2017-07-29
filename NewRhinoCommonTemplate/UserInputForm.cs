@@ -279,8 +279,14 @@ namespace RCWizard
 
       m_replacements["$utilitywithsample$"] = (utility.Checked && commandsample.Checked) ? "1" : "0";
       m_replacements["$utilitywithoutsample$"] = (utility.Checked && (!commandsample.Checked)) ? "1" : "0";
+
       m_replacements["$plugintype$"] =
-        utility.Checked?"utility" : digitizer.Checked?"digitizer": import.Checked?"import": rendering.Checked?"rendering":"export";
+        utility.Checked ? "utility" : digitizer.Checked ? "digitizer" :
+        import.Checked ? "import" : rendering.Checked ? "rendering" : "export";
+
+      m_replacements["$iconname$"] =
+        utility.Checked ? "plugin-utility.ico" : digitizer.Checked ? "plugin-digitize.ico" :
+        import.Checked ? "plugin-import.ico" : rendering.Checked ? "plugin-render.ico" : "plugin-export.ico";
     }
   }
 }

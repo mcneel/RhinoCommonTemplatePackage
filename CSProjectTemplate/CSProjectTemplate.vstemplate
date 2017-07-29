@@ -17,6 +17,12 @@
       <ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" OpenInEditor="true" OpenOrder="1">$commandname$.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" OpenInEditor="true" OpenOrder="2">$pluginname$.cs</ProjectItem>
+      
+      <ProjectItem ReplaceParameters="false" TargetFileName="Icons\plugin-digitize.ico" OpenInEditor="false">plugin-digitize.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Icons\plugin-export.ico" OpenInEditor="false">plugin-export.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Icons\plugin-import.ico" OpenInEditor="false">plugin-import.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Icons\plugin-render.ico" OpenInEditor="false">plugin-render.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Icons\plugin-utility.ico" OpenInEditor="false">plugin-utility.ico</ProjectItem>
     </Project>
   </TemplateContent>
   <WizardExtension>

@@ -18,12 +18,19 @@
       <ProjectItem ReplaceParameters="true" OpenInEditor="true" OpenOrder="10">$pluginname$.vb</ProjectItem>
       
       <ProjectItem ReplaceParameters="true" TargetFileName="My Project\AssemblyInfo.vb">AssemblyInfo.vb</ProjectItem>
+      
       <ProjectItem ReplaceParameters="false" TargetFileName="My Project\Application.myapp">MyApplication.myapp</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="My Project\Application.Designer.vb">MyApplication.Designer.vb</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="My Project\Resources.resx">Resources.resx</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="My Project\Resources.Designer.vb">Resources.Designer.vb</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="My Project\Settings.settings">Settings.settings</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="My Project\Settings.Designer.vb">Settings.Designer.vb</ProjectItem>
+
+      <ProjectItem ReplaceParameters="true" TargetFileName="Icons\plugin-digitize.ico">plugin-digitize.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Icons\plugin-export.ico">plugin-export.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Icons\plugin-import.ico">plugin-import.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Icons\plugin-render.ico">plugin-render.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Icons\plugin-utility.ico">plugin-utility.ico</ProjectItem>
     </Project>
   </TemplateContent>
 

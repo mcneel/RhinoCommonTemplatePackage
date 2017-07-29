@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Microsoft.VisualStudio.TemplateWizard;
 using System.Windows.Forms;
 using EnvDTE;
+using System.Reflection;
+using System.IO;
 
 namespace NewRhinoCommonTemplate
 {

@@ -3,8 +3,8 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Rhino.PlugIns;
 
-// Plug-in Description Attributes - all of these are optional
-// These will show in Rhino's option dialog, in the tab Plug-ins
+// Plug-in Description Attributes - all of these are optional.
+// These will show in Rhino's option dialog, in the tab Plug-ins.
 [assembly: PlugInDescription(DescriptionType.Address, "-")]
 [assembly: PlugInDescription(DescriptionType.Country, "-")]
 [assembly: PlugInDescription(DescriptionType.Email, "-")]
@@ -14,11 +14,18 @@ using Rhino.PlugIns;
 [assembly: PlugInDescription(DescriptionType.UpdateUrl, "-")]
 [assembly: PlugInDescription(DescriptionType.WebSite, "-")]
 
+// Icons should be Windows .ico files and contain 32-bit images in the following sizes: 16, 24, 32, 48, and 256.
+// This is a Rhino 6-only description.
+[assembly: PlugInDescription(DescriptionType.Icon, "$safeprojectname$.$iconname$")]
+
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("$projectname$")]
-[assembly: AssemblyDescription("")]
+
+// This will be used also for the plug-in description.
+[assembly: AssemblyDescription("$projectname$ $plugintype$ plug-in")]
+
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("$registeredorganization$")]
 [assembly: AssemblyProduct("$projectname$")]
@@ -44,6 +51,7 @@ using Rhino.PlugIns;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
+
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 

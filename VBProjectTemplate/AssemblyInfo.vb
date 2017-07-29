@@ -3,8 +3,8 @@ Imports System.Reflection
 Imports System.Runtime.InteropServices
 Imports Rhino.PlugIns
 
-' Plug-in Description Attributes - all of these are optional
-' These will show in Rhino's option dialog, in the tab Plug-ins
+' Plug-in Description Attributes - all of these are optional.
+' These will show in Rhino's option dialog, in the tab Plug-ins.
 <Assembly: PlugInDescription(DescriptionType.Address, "-")>
 <Assembly: PlugInDescription(DescriptionType.Country, "-")>
 <Assembly: PlugInDescription(DescriptionType.Email, "-")>
@@ -14,19 +14,28 @@ Imports Rhino.PlugIns
 <Assembly: PlugInDescription(DescriptionType.UpdateUrl, "-")>
 <Assembly: PlugInDescription(DescriptionType.WebSite, "-")>
 
+' Icons should be Windows .ico files And contain 32-bit images in the following sizes 16, 24, 32, 48, And 256.
+' This is a Rhino 6-only description.
+<Assembly: PlugInDescription(DescriptionType.Icon, "$safeprojectname$.$iconname$")>
+
 ' General Information about an assembly is controlled through the following 
 ' set of attributes. Change these attribute values to modify the information
 ' associated with an assembly.
-
-' Review the values of the assembly attributes
-
 <Assembly: AssemblyTitle("$projectname$")>
-<Assembly: AssemblyDescription("")>
+
+' This will be used also for the plug-in description.
+<Assembly: AssemblyDescription("$projectname$ $plugintype$ plug-in")>
+
+<Assembly: AssemblyConfiguration("")>
 <Assembly: AssemblyCompany("$registeredorganization$")>
 <Assembly: AssemblyProduct("$projectname$")>
 <Assembly: AssemblyCopyright("Copyright © $registeredorganization$ $year$")>
 <Assembly: AssemblyTrademark("")>
+<Assembly: AssemblyCulture("")>
 
+' Setting ComVisible to false makes the types in this assembly not visible 
+' to COM components.  If you need to access a type in this assembly from 
+' COM, set the ComVisible attribute to true on that type.
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
