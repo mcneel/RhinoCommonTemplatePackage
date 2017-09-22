@@ -84,7 +84,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Icons\$iconname$" />
+    <EmbeddedResource Include="EmbeddedResources\$iconname$" />
   </ItemGroup>
 
   <ItemGroup>

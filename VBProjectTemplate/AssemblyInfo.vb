@@ -16,7 +16,7 @@ Imports Rhino.PlugIns
 
 ' Icons should be Windows .ico files And contain 32-bit images in the following sizes 16, 24, 32, 48, And 256.
 ' This is a Rhino 6-only description.
-<Assembly: PlugInDescription(DescriptionType.Icon, "$safeprojectname$.$iconname$")>
+<Assembly: PlugInDescription(DescriptionType.Icon, "$safeprojectname$.EmbeddedResources.$iconname$")>
 
 ' General Information about an assembly is controlled through the following 
 ' set of attributes. Change these attribute values to modify the information

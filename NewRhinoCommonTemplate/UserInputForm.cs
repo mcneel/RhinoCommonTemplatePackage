@@ -284,9 +284,11 @@ namespace RCWizard
         utility.Checked ? "utility" : digitizer.Checked ? "digitizer" :
         import.Checked ? "import" : rendering.Checked ? "rendering" : "export";
 
+      var safe_name = m_replacements["$safeprojectname$"];
+
       m_replacements["$iconname$"] =
-        utility.Checked ? "plugin-utility.ico" : digitizer.Checked ? "plugin-digitize.ico" :
-        import.Checked ? "plugin-import.ico" : rendering.Checked ? "plugin-render.ico" : "plugin-export.ico";
+        utility.Checked ? $"{safe_name}-utility.ico" : digitizer.Checked ? $"{safe_name}-digitize.ico" :
+        import.Checked ? $"{safe_name}-import.ico" : rendering.Checked ? $"{safe_name}-render.ico" : $"{safe_name}-export.ico";
     }
   }
 }
