@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="3F54AA95-00EA-4C83-A877-96C1EE1789EE" Version="6.4.1.2" Language="en-US" Publisher="Robert McNeel &amp; Associates" />
+        <Identity Id="3F54AA95-00EA-4C83-A877-96C1EE1789EE" Version="6.5.0.1" Language="en-US" Publisher="Robert McNeel &amp; Associates" />
         <DisplayName>RhinoCommon templates for v6</DisplayName>
         <Description xml:space="preserve">Adds plug-in, command and zoo wizards for RhinoCommon projects. This includes digitizer, render, import and export plug-ins. Makes setting up debugging easier and automatically references RhinoCommon.dll. Rhinoceros 6 is a requirement for this wizard to operate correctly.
 
@@ -10,7 +10,7 @@ http://www.rhino3d.com/go/rhinocommon_guide .
 
 For support about this wizard, write on the McNeel Discourse website, http://discourse.mcneel.com/ or email giulio@mcneel.com.
 
-Copyright (c) 2016-2017 Robert McNeel and Associates. All rights reserved.</Description>
+Copyright (c) 2016-2019 Robert McNeel and Associates. All rights reserved.</Description>
         <License>license.rtf</License>
         <GettingStartedGuide>http://www.rhino3d.com/go/rhinocommon_guide</GettingStartedGuide>
         <Icon>icon.ico</Icon>

@@ -18,15 +18,15 @@
       <ProjectItem ReplaceParameters="true" OpenInEditor="true" OpenOrder="1">$commandname$.cs</ProjectItem>
       <ProjectItem ReplaceParameters="true" OpenInEditor="true" OpenOrder="2">$pluginname$.cs</ProjectItem>
       
-      <ProjectItem ReplaceParameters="false" TargetFileName="EmbeddedResources\$safeprojectname$-digitize.ico" OpenInEditor="false">plugin-digitize.ico</ProjectItem>
-      <ProjectItem ReplaceParameters="false" TargetFileName="EmbeddedResources\$safeprojectname$-export.ico" OpenInEditor="false">plugin-export.ico</ProjectItem>
-      <ProjectItem ReplaceParameters="false" TargetFileName="EmbeddedResources\$safeprojectname$-import.ico" OpenInEditor="false">plugin-import.ico</ProjectItem>
-      <ProjectItem ReplaceParameters="false" TargetFileName="EmbeddedResources\$safeprojectname$-render.ico" OpenInEditor="false">plugin-render.ico</ProjectItem>
-      <ProjectItem ReplaceParameters="false" TargetFileName="EmbeddedResources\$safeprojectname$-utility.ico" OpenInEditor="false">plugin-utility.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="EmbeddedResources\plugin-digitize.ico" OpenInEditor="false">plugin-digitize.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="EmbeddedResources\plugin-export.ico" OpenInEditor="false">plugin-export.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="EmbeddedResources\plugin-import.ico" OpenInEditor="false">plugin-import.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="EmbeddedResources\plugin-render.ico" OpenInEditor="false">plugin-render.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="EmbeddedResources\plugin-utility.ico" OpenInEditor="false">plugin-utility.ico</ProjectItem>
     </Project>
   </TemplateContent>
   <WizardExtension>
-    <Assembly>NewRhinoCommonTemplate, Version=1.2.0.0, Culture=Neutral, PublicKeyToken=9cbe2d392744cfe6</Assembly>
+    <Assembly>NewRhinoCommonTemplate, Version=1.2.2.0, Culture=Neutral, PublicKeyToken=9cbe2d392744cfe6</Assembly>
     <FullClassName>NewRhinoCommonTemplate.CollectInformationWizard</FullClassName>
   </WizardExtension>
   

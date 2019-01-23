@@ -1,7 +1,6 @@
 ﻿Imports System
 Imports System.Reflection
 Imports System.Runtime.InteropServices
-Imports Rhino.PlugIns
 
 
 ' General Information about an assembly is controlled through the following 
@@ -20,7 +19,7 @@ Imports Rhino.PlugIns
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("$guid1$")>
+<Assembly: Guid("$guid2$")>
 
 ' Version information for an assembly consists of the following four values:
 '

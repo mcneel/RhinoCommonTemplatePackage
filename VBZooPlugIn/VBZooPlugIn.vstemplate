@@ -29,7 +29,7 @@ Also, remember to copy the ID from your Rhinoceros plug-in before continuing.</D
   </TemplateContent>
 
   <WizardExtension>
-    <Assembly>NewRhinoCommonTemplate, Version=1.2.0.0, Culture=Neutral, PublicKeyToken=9cbe2d392744cfe6</Assembly>
+    <Assembly>NewRhinoCommonTemplate, Version=1.2.2.0, Culture=Neutral, PublicKeyToken=9cbe2d392744cfe6</Assembly>
     <FullClassName>NewRhinoCommonTemplate.CollectInformationWizard</FullClassName>
   </WizardExtension>
 </VSTemplate>

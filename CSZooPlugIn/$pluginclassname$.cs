@@ -5,79 +5,56 @@ using ZooPlugin;
 
 namespace $safeprojectname$
 {
-	public class $pluginclassname$ : IZooPlugin
+	public class $pluginclassname$ : IZooPlugin3
 	{
     /// <summary>
     /// Returns a guid that uniquely identifies this Zoo plug-in class.
+    /// If you need another ID, use GUIDGEN.EXE to create the unique Guid.
     /// </summary>
-    public Guid ZooPluginId()
-    {
-      return new Guid("$guid2$");
-    }
+    public Guid ZooPluginId() => new Guid("$guid2$");
 
     /// <summary>
     /// Returns the name of your company or organization.
     /// (e.g. "Robert McNeel and Associates")
     /// </summary>
-    public string Organization()
-    {
-      return "$registeredorganization$";
-    }
+    public string Organization() => "$registeredorganization$";
 
     /// <summary>
     /// Returns the address of your company or organization. Use a "\r\n"
     /// character combination to separate lines.
     /// (e.g. "3670 Woodland Park Avenue North\r\nSeattle, WA 98115")
     /// </summary>
-    public string Address()
-    {
-      return "3670 Woodland Park Avenue North\r\nSeattle, WA 98115";
-    }
+    public string Address() => "3670 Woodland Park Avenue North\r\nSeattle, WA 98115";
 
     /// <summary>
     /// Returns the country in which your company or organization is located.
     /// (e.g. "United States")
     /// </summary>
-    public string Country()
-    {
-      return "United States";
-    }
+    public string Country() => "United States";
 
     /// <summary>
     /// Returns an email address that a customer can use to contact you.
     /// (e.g. "tech@mcneel.com")
     /// </summary>
-    public string Email()
-    {
-      return "example@example.com";
-    }
+    public string Email() => "example@example.com";
 
     /// <summary>
     /// Returns a phone number that a customer can use to contact you.
     /// (e.g. "(206) 545-7000")
     /// </summary>
-    public string Phone()
-    {
-      return "(000) 000-7000";
-    }
+    public string Phone() => "(000) 000-7000";
 
     /// <summary>
     /// Returns a FAX number that a customer can use to contact you.
     /// (e.g. "(206) 545-7321")
     /// </summary>
-    public string Fax()
-    {
-      return "(000) 000-1234";
-    }
+    public string Fax() => "(000) 000-1234";
 
     /// <summary>
     /// Returns the web address or url of your company or organization.
     /// (e.g. "http://www.rhino3d.com")
     /// </summary>
-    public string Web()
-    {
-      return "http://www.example.com";
-    }
+    public string Web() => "http://www.example.com";
 
     /// <summary>
     /// Returns your unique identifier, or PlugInId, of your Rhino plug-in.
@@ -85,7 +62,6 @@ namespace $safeprojectname$
     /// it will not be able to obtain a license from the Zoo.
     /// </summary>
     public Guid RhinoPluginId()
-    {
       // If your Rhino plug-in uses the C++ SDK, this is returned by your
       //    plug-in object's CRhinoPlugIn::PlugInID() override.
       //
@@ -94,8 +70,8 @@ namespace $safeprojectname$
       //
       // If your Rhino plug-in uses the RhinoCommon SDK, this is returned by your
       //    plug-in project's "Guid" assembly attribute.
-      return new Guid("$zooguid$");
-    }
+
+      => new Guid("$zooguid$");
 
     /// <summary>
     /// Returns the name, version, and/or type of the product that this plug-in
@@ -103,10 +79,15 @@ namespace $safeprojectname$
     /// choose type type of license to validate.
     /// </summary>
     /// <returns></returns>
-    public string ProductTitle()
-    {
-      return "$safeprojectname$ 1.0";
-    }
+    public string ProductTitle() => "$safeprojectname$ 1.0";
+
+
+    /// <summary>
+    /// The product key text mask, as shown when you add licenses to the Zoo.
+    /// </summary>
+    /// <returns></returns>
+    public string ProductKeyTextMask() => @">ZO6\0-AAAA-AAAA-AAAA-AAAA-AAAA";
+
 
     /// <summary>
     /// Validates a product, or CD, key that was entered into the Zoo administrator
@@ -194,7 +175,7 @@ namespace $safeprojectname$
     /// The CultureInfo associated with the currently running process; use this info
     /// to localize your error messages appropriately.
     /// </param>
-    /// <returns></returns>
+    /// <returns>A formatted error string.</returns>
     public string FormatErrorMessage(int messageID, System.Globalization.CultureInfo locale)
     {
       string message = null;
@@ -230,27 +211,81 @@ namespace $safeprojectname$
 
       return new string(outputChars);
     }
-    
+
+
     /// <summary>
-	/// We do not need to show any UI.
-	/// If we wanted to, we could show it here before the key is passed over
-	/// to <see cref="ValidateProductKey">ValidateProductKey</see>.
-	/// </summary>
-	/// <param name="productKey">The product, or CD, key to validate.
-	/// This is the raw, unmodified product key string as entered into the
-	/// Zoo Administrator console.</param>
-	/// <param name="validatedKey">The modified productKey string.
-	/// Again, in most cases you will set validatedKey equal productKey.
-	/// This value will be passed to ValidateProductKey().</param>
-	/// <returns>Return 0 on success; the output Message is ignored.
-	/// Return any other number to indicate failure. The Zoo will call
-	/// FormatErrorMessage with the value you return in order to get a
-	/// human-readable error message for display and logging purposes.
-	/// </returns>
-	public int ValidateProductKeyUI(string productKey, out string validatedKey)
-	{
-	    validatedKey = productKey;
-	    return 0;
-	}
+    /// <para>Pre-validates a product, or CD, key that was entered into the Zoo administrator
+    /// console. Note, this member is called before ValidateProductKey(). This is your
+    /// plug-in's one chance to display any kind of user-interface, if needed. In most
+    /// cases, you will simply set validatedKey = productKey and return 0.</para>
+    /// <para></para>
+    /// <para>We do not need to show any UI.
+    /// If we wanted to, we could show it here before the key is passed over
+    /// to <see cref="ValidateProductKey">ValidateProductKey</see>.</para>
+    /// </summary>
+    /// <param name="productKey">The product, or CD, key to validate.
+    /// This is the raw, unmodified product key string as entered into the
+    /// Zoo Administrator console.</param>
+    /// <param name="validatedKey">The modified productKey string.
+    /// Again, in most cases you will set validatedKey equal productKey.
+    /// This value will be passed to ValidateProductKey().</param>
+    /// <returns>Return 0 on success; the output Message is ignored.
+    /// Return any other number to indicate failure. The Zoo will call
+    /// FormatErrorMessage with the value you return in order to get a
+    /// human-readable error message for display and logging purposes.
+    /// </returns>
+    public int ValidateProductKeyUI(string productKey, out string validatedKey)
+	  {
+	    return ValidateProductKeyUI(productKey, out validatedKey, out List<string> clusterSerialNumbers);
+	  }
+
+    /// <summary>
+    /// We do not need to show any UI.
+    /// If we wanted to, we could show it here before the key is passed over
+    /// to <see cref="ValidateProductKey">ValidateProductKey</see>.
+    /// </summary>
+    /// <param name="productKey">The product, or CD, key to validate.
+    /// This is the raw, unmodified product key string as entered into the
+    /// Zoo Administrator console.
+    /// </param>
+    /// <param name="validatedKey">The modified productKey string.
+    /// Again, in most cases you will set validatedKey equal productKey.
+    /// This value will be passed to ValidateProductKey().
+    /// </param>
+    /// <param name="clusterSerialNumbers">
+    /// If this license is linked with other licenses, then add those
+    /// licence serial numbers to this list.
+    /// </param>
+    /// <returns>Return any other number to indicate failure. The Zoo will call
+    /// FormatErrorMessage with the value you return in order to get a
+    /// human-readable error message for display and logging purposes.
+    /// </returns>
+    public int ValidateProductKeyUI(string productKey, out string validatedKey, out List<string> clusterSerialNumbers)
+    {
+      validatedKey = productKey;
+      clusterSerialNumbers = new List<string>();
+      return 0; // success
+    }
+
+    /// <summary>
+    /// When the Zoo deletes a license, this method is called.
+    /// </summary>
+    /// <param name="productKey">
+    /// The product, or CD, key to validate.
+    /// This is the raw, unmodified product key string as entered into the
+    /// Zoo Administrator console.
+    /// </param>
+    /// <param name="errorMessage">An error message if needed.</param>
+    /// <returns>Return 0 if successful.</returns>
+    public int OnDeleteLicense(string productKey, out string errorMessage)
+    {
+      errorMessage = string.Empty;
+      return 0;
+    }
+
+    /// <summary>
+    /// Return true if this is a Release license, as opposed to a WIP or Beta license.
+    /// </summary>
+    public bool IsReleased => true;
 	}
 }

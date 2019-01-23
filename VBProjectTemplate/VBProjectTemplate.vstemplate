@@ -26,16 +26,16 @@
       <ProjectItem ReplaceParameters="false" TargetFileName="My Project\Settings.settings">Settings.settings</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="My Project\Settings.Designer.vb">Settings.Designer.vb</ProjectItem>
 
-      <ProjectItem ReplaceParameters="true" TargetFileName="EmbeddedResources\$safeprojectname$-digitize.ico">plugin-digitize.ico</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="EmbeddedResources\$safeprojectname$-export.ico">plugin-export.ico</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="EmbeddedResources\$safeprojectname$-import.ico">plugin-import.ico</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="EmbeddedResources\$safeprojectname$-render.ico">plugin-render.ico</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="EmbeddedResources\$safeprojectname$-utility.ico">plugin-utility.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="EmbeddedResources\plugin-digitize.ico">plugin-digitize.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="EmbeddedResources\plugin-export.ico">plugin-export.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="EmbeddedResources\plugin-import.ico">plugin-import.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="EmbeddedResources\plugin-render.ico">plugin-render.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="EmbeddedResources\plugin-utility.ico">plugin-utility.ico</ProjectItem>
     </Project>
   </TemplateContent>
 
   <WizardExtension>
-    <Assembly>NewRhinoCommonTemplate, Version=1.2.0.0, Culture=Neutral, PublicKeyToken=9cbe2d392744cfe6</Assembly>
+    <Assembly>NewRhinoCommonTemplate, Version=1.2.2.0, Culture=Neutral, PublicKeyToken=9cbe2d392744cfe6</Assembly>
     <FullClassName>NewRhinoCommonTemplate.CollectInformationWizard</FullClassName>
   </WizardExtension>
 </VSTemplate>

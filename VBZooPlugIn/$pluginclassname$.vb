@@ -1,9 +1,11 @@
-﻿Imports ZooPlugin
+﻿Imports System.Runtime.InteropServices
+Imports ZooPlugin
 
-Public Class $pluginclassname$ : Implements IZooPlugin
+Public Class $pluginclassname$ : Implements IZooPlugin3
 
   ''' <summary>
   ''' Returns a guid that uniquely identifies this Zoo plug-in class.
+  ''' If you need a new ID, use GUIDGEN.EXE to create the unique Guid.
   ''' </summary>
   Public Function ZooPluginId() As System.Guid Implements ZooPlugin.IZooPlugin.ZooPluginId
     Return New Guid("$guid2$")
@@ -90,6 +92,15 @@ Public Class $pluginclassname$ : Implements IZooPlugin
   Public Function ProductTitle() As String Implements ZooPlugin.IZooPlugin.ProductTitle
     Return "$safeprojectname$ 1.0"
   End Function
+
+
+  ''' <summary>
+  ''' The product key text mask, as shown when you add licenses to the Zoo.
+  ''' </summary>
+  Public Function ProductKeyTextMask() As String Implements IZooPlugin3.ProductKeyTextMask
+    Return ">ZO6\0-AAAA-AAAA-AAAA-AAAA-AAAA"
+  End Function
+
 
   ''' <summary>
   ''' Validates a product, or CD, key that was entered into the Zoo administrator
@@ -212,25 +223,78 @@ Public Class $pluginclassname$ : Implements IZooPlugin
 
     Return New String(outputChars)
   End Function
-  
-    ''' <summary>
-    ''' We do not need to show any UI.
-    ''' If we wanted to, we could show it here before the key is passed over
-    ''' to <see cref="ValidateProductKey">ValidateProductKey</see>.
-    ''' </summary>
-    ''' <param name="productKey">The product, or CD, key to validate.
-    ''' This is the raw, unmodified product key string as entered into the
-    ''' Zoo Administrator console.</param>
-    ''' <param name="validatedKey">The modified productKey string.
-    ''' Again, in most cases you will set validatedKey equal productKey.
-    ''' This value will be passed to ValidateProductKey().</param>
-    ''' <returns>Return 0 on success; the output Message is ignored.
-    ''' Return any other number to indicate failure. The Zoo will call
-    ''' FormatErrorMessage with the value you return in order to get a
-    ''' human-readable error message for display and logging purposes.
-    ''' </returns>
-    Public Function ValidateProductKeyUI(productKey As String, ByRef validatedKey As String) As Integer Implements ZooPlugin.IZooPlugin.ValidateProductKeyUI
-        validatedKey = productKey
-        Return 0
-    End Function
+
+  ''' <summary>
+  ''' We do not need to show any UI.
+  ''' If we wanted to, we could show it here before the key is passed over
+  ''' to <see cref="ValidateProductKey">ValidateProductKey</see>.
+  ''' </summary>
+  ''' <param name="productKey">The product, or CD, key to validate.
+  ''' This is the raw, unmodified product key string as entered into the
+  ''' Zoo Administrator console.</param>
+  ''' <param name="validatedKey">The modified productKey string.
+  ''' Again, in most cases you will set validatedKey equal productKey.
+  ''' This value will be passed to ValidateProductKey().</param>
+  ''' <returns>Return 0 on success; the output Message is ignored.
+  ''' Return any other number to indicate failure. The Zoo will call
+  ''' FormatErrorMessage with the value you return in order to get a
+  ''' human-readable error message for display and logging purposes.
+  ''' </returns>
+  Public Function ValidateProductKeyUI(productKey As String, ByRef validatedKey As String) As Integer Implements ZooPlugin.IZooPlugin.ValidateProductKeyUI
+    validatedKey = productKey
+    Return 0
+  End Function
+
+
+  ''' <summary>
+  ''' We do not need to show any UI.
+  ''' If we wanted to, we could show it here before the key is passed over
+  ''' to <see cref="ValidateProductKey">ValidateProductKey</see>.
+  ''' </summary>
+  ''' <param name="productKey">The product, or CD, key to validate.
+  ''' This is the raw, unmodified product key string as entered into the
+  ''' Zoo Administrator console.
+  ''' </param>
+  ''' <param name="validatedKey">The modified productKey string.
+  ''' Again, in most cases you will set validatedKey equal productKey.
+  ''' This value will be passed to ValidateProductKey().
+  ''' </param>
+  ''' <param name="clusterSerialNumbers">
+  ''' If this license is linked with other licenses, then add those
+  ''' licence serial numbers to this list.
+  ''' </param>
+  ''' <returns>
+  ''' Return 0 on success; the output Message is ignored.
+  ''' Return any other number to indicate failure. The Zoo will call
+  ''' FormatErrorMessage with the value you return in order to get a
+  ''' human-readable error message for display and logging purposes.
+  ''' </returns>
+  Public Function ValidateProductKeyUI(productKey As String, <Out> ByRef validatedKey As String, <Out> ByRef clusterSerialNumbers As List(Of String)) As Integer Implements IZooPlugin3.ValidateProductKeyUI
+    validatedKey = productKey
+    clusterSerialNumbers = New List(Of String)()
+    Return 0
+  End Function
+
+  ''' <summary>
+  ''' When the Zoo deletes a license, this method is called.
+  ''' </summary>
+  ''' <param name="productKey">The product, or CD, key to validate.
+  ''' This is the raw, unmodified product key string as entered into the
+  ''' Zoo Administrator console.</param>
+  ''' <param name="errorMessage">An error message if needed.</param>
+  ''' <returns>Return 0 if successful.</returns>
+  Public Function OnDeleteLicense(productKey As String, <Out> ByRef errorMessage As String) As Integer Implements IZooPlugin3.OnDeleteLicense
+    errorMessage = ""
+    Return 0
+  End Function
+
+  ''' <summary>
+  ''' Return true if this is a Release license, as opposed to a WIP or Beta license.
+  ''' </summary>
+  Public ReadOnly Property IsReleased As Boolean Implements IZooPlugin3.IsReleased
+    Get
+      Return True
+    End Get
+  End Property
+
 End Class
