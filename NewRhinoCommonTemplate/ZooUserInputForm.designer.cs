@@ -44,6 +44,7 @@
       this.groupBox1 = new System.Windows.Forms.GroupBox();
       this.groupBox3 = new System.Windows.Forms.GroupBox();
       this.label5 = new System.Windows.Forms.Label();
+      this.label6 = new System.Windows.Forms.Label();
       this.groupBox2.SuspendLayout();
       this.groupBox1.SuspendLayout();
       this.groupBox3.SuspendLayout();
@@ -52,27 +53,30 @@
       // pluginclassname
       // 
       this.pluginclassname.BackColor = System.Drawing.SystemColors.Window;
-      this.pluginclassname.Location = new System.Drawing.Point(130, 54);
+      this.pluginclassname.Location = new System.Drawing.Point(260, 104);
+      this.pluginclassname.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
       this.pluginclassname.Name = "pluginclassname";
-      this.pluginclassname.Size = new System.Drawing.Size(232, 20);
+      this.pluginclassname.Size = new System.Drawing.Size(460, 31);
       this.pluginclassname.TabIndex = 0;
       this.pluginclassname.TextChanged += new System.EventHandler(this.textbox_TextChanged);
       // 
       // label1
       // 
       this.label1.AutoSize = true;
-      this.label1.Location = new System.Drawing.Point(7, 57);
+      this.label1.Location = new System.Drawing.Point(14, 110);
+      this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
       this.label1.Name = "label1";
-      this.label1.Size = new System.Drawing.Size(117, 13);
+      this.label1.Size = new System.Drawing.Size(237, 25);
       this.label1.TabIndex = 1;
       this.label1.Text = "Zoo Plug-in class name";
       // 
       // finish
       // 
       this.finish.DialogResult = System.Windows.Forms.DialogResult.OK;
-      this.finish.Location = new System.Drawing.Point(229, 335);
+      this.finish.Location = new System.Drawing.Point(458, 644);
+      this.finish.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
       this.finish.Name = "finish";
-      this.finish.Size = new System.Drawing.Size(75, 23);
+      this.finish.Size = new System.Drawing.Size(150, 44);
       this.finish.TabIndex = 10;
       this.finish.Text = "Finish";
       this.finish.UseVisualStyleBackColor = true;
@@ -80,9 +84,10 @@
       // cancel
       // 
       this.cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-      this.cancel.Location = new System.Drawing.Point(310, 335);
+      this.cancel.Location = new System.Drawing.Point(620, 644);
+      this.cancel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
       this.cancel.Name = "cancel";
-      this.cancel.Size = new System.Drawing.Size(75, 23);
+      this.cancel.Size = new System.Drawing.Size(150, 44);
       this.cancel.TabIndex = 11;
       this.cancel.Text = "Cancel";
       this.cancel.UseVisualStyleBackColor = true;
@@ -90,17 +95,19 @@
       // label2
       // 
       this.label2.AutoSize = true;
-      this.label2.Location = new System.Drawing.Point(7, 86);
+      this.label2.Location = new System.Drawing.Point(14, 165);
+      this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
       this.label2.Name = "label2";
-      this.label2.Size = new System.Drawing.Size(118, 13);
+      this.label2.Size = new System.Drawing.Size(235, 25);
       this.label2.TabIndex = 5;
       this.label2.Text = "Linked Rhino plug-in ID";
       // 
       // zooguid
       // 
-      this.zooguid.Location = new System.Drawing.Point(130, 84);
+      this.zooguid.Location = new System.Drawing.Point(260, 162);
+      this.zooguid.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
       this.zooguid.Name = "zooguid";
-      this.zooguid.Size = new System.Drawing.Size(232, 20);
+      this.zooguid.Size = new System.Drawing.Size(460, 31);
       this.zooguid.TabIndex = 1;
       this.zooguid.TextChanged += new System.EventHandler(this.zooGuid_TextChanged);
       // 
@@ -110,9 +117,11 @@
       this.groupBox2.Controls.Add(this.zoodlllabel);
       this.groupBox2.Controls.Add(this.browseZooDllButton);
       this.groupBox2.Controls.Add(this.zoodllpath);
-      this.groupBox2.Location = new System.Drawing.Point(12, 222);
+      this.groupBox2.Location = new System.Drawing.Point(24, 427);
+      this.groupBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
       this.groupBox2.Name = "groupBox2";
-      this.groupBox2.Size = new System.Drawing.Size(373, 107);
+      this.groupBox2.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+      this.groupBox2.Size = new System.Drawing.Size(746, 206);
       this.groupBox2.TabIndex = 7;
       this.groupBox2.TabStop = false;
       this.groupBox2.Text = "Zoo .dll reference";
@@ -122,9 +131,10 @@
       this.label4.AutoSize = true;
       this.label4.ForeColor = System.Drawing.SystemColors.ControlDark;
       this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-      this.label4.Location = new System.Drawing.Point(7, 16);
+      this.label4.Location = new System.Drawing.Point(14, 31);
+      this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
       this.label4.Name = "label4";
-      this.label4.Size = new System.Drawing.Size(308, 26);
+      this.label4.Size = new System.Drawing.Size(623, 50);
       this.label4.TabIndex = 15;
       this.label4.Text = "A  reference to the ZooPlugin.dll file will be added to the project.\r\n\"Copylocal\"" +
     " will be set to false.";
@@ -133,17 +143,19 @@
       // zoodlllabel
       // 
       this.zoodlllabel.AutoSize = true;
-      this.zoodlllabel.Location = new System.Drawing.Point(7, 51);
+      this.zoodlllabel.Location = new System.Drawing.Point(14, 98);
+      this.zoodlllabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
       this.zoodlllabel.Name = "zoodlllabel";
-      this.zoodlllabel.Size = new System.Drawing.Size(68, 13);
+      this.zoodlllabel.Size = new System.Drawing.Size(137, 25);
       this.zoodlllabel.TabIndex = 9;
       this.zoodlllabel.Text = "ZooPlugin.dll";
       // 
       // browseZooDllButton
       // 
-      this.browseZooDllButton.Location = new System.Drawing.Point(81, 47);
+      this.browseZooDllButton.Location = new System.Drawing.Point(162, 90);
+      this.browseZooDllButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
       this.browseZooDllButton.Name = "browseZooDllButton";
-      this.browseZooDllButton.Size = new System.Drawing.Size(24, 19);
+      this.browseZooDllButton.Size = new System.Drawing.Size(48, 37);
       this.browseZooDllButton.TabIndex = 5;
       this.browseZooDllButton.Text = "...";
       this.browseZooDllButton.UseVisualStyleBackColor = true;
@@ -153,9 +165,10 @@
       // 
       this.zoodllpath.AutoSize = true;
       this.zoodllpath.ForeColor = System.Drawing.SystemColors.ControlDark;
-      this.zoodllpath.Location = new System.Drawing.Point(4, 66);
+      this.zoodllpath.Location = new System.Drawing.Point(8, 127);
+      this.zoodllpath.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
       this.zoodllpath.Name = "zoodllpath";
-      this.zoodllpath.Size = new System.Drawing.Size(77, 13);
+      this.zoodllpath.Size = new System.Drawing.Size(147, 25);
       this.zoodllpath.TabIndex = 13;
       this.zoodllpath.Text = "path\\to\\zoo.dll";
       // 
@@ -164,20 +177,24 @@
       this.label3.AutoSize = true;
       this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
       this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-      this.label3.Location = new System.Drawing.Point(8, 18);
+      this.label3.Location = new System.Drawing.Point(16, 35);
+      this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
       this.label3.Name = "label3";
-      this.label3.Size = new System.Drawing.Size(0, 13);
+      this.label3.Size = new System.Drawing.Size(0, 25);
       this.label3.TabIndex = 14;
       this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       // 
       // groupBox1
       // 
+      this.groupBox1.Controls.Add(this.label6);
       this.groupBox1.Controls.Add(this.label2);
       this.groupBox1.Controls.Add(this.label3);
       this.groupBox1.Controls.Add(this.zooguid);
-      this.groupBox1.Location = new System.Drawing.Point(12, 98);
+      this.groupBox1.Location = new System.Drawing.Point(24, 188);
+      this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
       this.groupBox1.Name = "groupBox1";
-      this.groupBox1.Size = new System.Drawing.Size(373, 118);
+      this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+      this.groupBox1.Size = new System.Drawing.Size(746, 227);
       this.groupBox1.TabIndex = 15;
       this.groupBox1.TabStop = false;
       this.groupBox1.Text = "Linked ID";
@@ -187,9 +204,11 @@
       this.groupBox3.Controls.Add(this.label5);
       this.groupBox3.Controls.Add(this.label1);
       this.groupBox3.Controls.Add(this.pluginclassname);
-      this.groupBox3.Location = new System.Drawing.Point(12, 12);
+      this.groupBox3.Location = new System.Drawing.Point(24, 23);
+      this.groupBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
       this.groupBox3.Name = "groupBox3";
-      this.groupBox3.Size = new System.Drawing.Size(373, 80);
+      this.groupBox3.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+      this.groupBox3.Size = new System.Drawing.Size(746, 154);
       this.groupBox3.TabIndex = 16;
       this.groupBox3.TabStop = false;
       this.groupBox3.Text = "Class name";
@@ -199,22 +218,36 @@
       this.label5.AutoSize = true;
       this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
       this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-      this.label5.Location = new System.Drawing.Point(7, 17);
+      this.label5.Location = new System.Drawing.Point(14, 33);
+      this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
       this.label5.Name = "label5";
-      this.label5.Size = new System.Drawing.Size(307, 26);
+      this.label5.Size = new System.Drawing.Size(620, 50);
       this.label5.TabIndex = 15;
       this.label5.Text = "The name of the class that implements the IZooPlugin interface.\r\nChoose a valid c" +
     "lass identifier.";
       this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
       // 
+      // label6
+      // 
+      this.label6.AutoSize = true;
+      this.label6.ForeColor = System.Drawing.SystemColors.ControlDark;
+      this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      this.label6.Location = new System.Drawing.Point(17, 35);
+      this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+      this.label6.Name = "label6";
+      this.label6.Size = new System.Drawing.Size(619, 100);
+      this.label6.TabIndex = 16;
+      this.label6.Text = resources.GetString("label6.Text");
+      this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+      // 
       // ZooUserInputForm
       // 
       this.AcceptButton = this.finish;
-      this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+      this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.BackColor = System.Drawing.SystemColors.Control;
       this.CancelButton = this.cancel;
-      this.ClientSize = new System.Drawing.Size(397, 366);
+      this.ClientSize = new System.Drawing.Size(794, 704);
       this.Controls.Add(this.groupBox3);
       this.Controls.Add(this.groupBox1);
       this.Controls.Add(this.groupBox2);
@@ -223,6 +256,7 @@
       this.ForeColor = System.Drawing.SystemColors.ControlText;
       this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+      this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
       this.MaximizeBox = false;
       this.MinimizeBox = false;
       this.Name = "ZooUserInputForm";
@@ -257,6 +291,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label5;
-    }
+    private System.Windows.Forms.Label label6;
+  }
 }
 
