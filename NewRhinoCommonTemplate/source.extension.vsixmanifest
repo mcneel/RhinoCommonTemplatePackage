@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="3F54AA95-00EA-4C83-A877-96C1EE1789EE" Version="6.5.1.1" Language="en-US" Publisher="Robert McNeel &amp; Associates" />
+        <Identity Id="3F54AA95-00EA-4C83-A877-96C1EE1789EE" Version="6.5.2.0" Language="en-US" Publisher="Robert McNeel &amp; Associates" />
         <DisplayName>RhinoCommon templates for v6</DisplayName>
         <Description xml:space="preserve">Adds plug-in, command and zoo wizards for RhinoCommon projects. This includes digitizer, render, import and export plug-ins. Makes setting up debugging easier and automatically references RhinoCommon.dll. Rhinoceros 6 is a requirement for this wizard to operate correctly.
 
@@ -18,7 +18,7 @@ Copyright (c) 2016-2019 Robert McNeel and Associates. All rights reserved.</Desc
         <Tags>rhinocommon grasshopper</Tags>
     </Metadata>
     <Installation>
-        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0,17.0)" />
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0,)" />
     </Installation>
     <Dependencies>
         <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
