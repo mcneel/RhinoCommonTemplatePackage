@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
-    <Name>Empty Rhinoceros 6 Command</Name>
+    <Name>Empty Rhinoceros 6 Command (C#)</Name>
     <Description>A new RhinoCommon Command implemented in C#</Description>
     <Icon>icon.ico</Icon>
     <TemplateID>A4357690-067C-4746-A693-83338AE92C0F</TemplateID>
@@ -10,6 +10,9 @@
     <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
     <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
     <DefaultName>MyCommand.cs</DefaultName>
+    <LanguageTag>C#</LanguageTag>
+    <PlatformTag>windows</PlatformTag>
+    <ProjectTypeTag>desktop</ProjectTypeTag>
   </TemplateData>
   <TemplateContent>
     <References>

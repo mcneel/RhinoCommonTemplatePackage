@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
-    <Name>Empty RhinoCommon Command</Name>
+    <Name>Empty RhinoCommon Command (VB)</Name>
     <Description>A new RhinoCommon Command implemented in Vb.Net</Description>
     <Icon>icon.ico</Icon>
     <TemplateID>46AF52ED-F78B-4D60-AD75-9D9BF8191C6E</TemplateID>
@@ -10,6 +10,10 @@
     <ProjectType>VisualBasic</ProjectType>
     <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
     <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    
+    <LanguageTag>Visual Basic</LanguageTag>
+    <PlatformTag>windows</PlatformTag>
+    <ProjectTypeTag>desktop</ProjectTypeTag>
   </TemplateData>
   <TemplateContent>
     <References>
