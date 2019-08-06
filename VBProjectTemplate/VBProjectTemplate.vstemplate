@@ -12,7 +12,7 @@
     <ProvideDefaultName>true</ProvideDefaultName>
     <RequiredFrameworkVersion>4.5</RequiredFrameworkVersion>
 
-    <LanguageTag>Visual Basic</LanguageTag>
+    <LanguageTag>visualbasic</LanguageTag>
     <PlatformTag>windows</PlatformTag>
     <ProjectTypeTag>desktop</ProjectTypeTag>
   </TemplateData>

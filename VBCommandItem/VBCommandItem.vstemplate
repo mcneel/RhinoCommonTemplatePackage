@@ -11,7 +11,7 @@
     <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
     <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
     
-    <LanguageTag>Visual Basic</LanguageTag>
+    <LanguageTag>visualbasic</LanguageTag>
     <PlatformTag>windows</PlatformTag>
     <ProjectTypeTag>desktop</ProjectTypeTag>
   </TemplateData>

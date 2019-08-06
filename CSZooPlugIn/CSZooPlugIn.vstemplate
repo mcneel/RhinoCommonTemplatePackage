@@ -14,7 +14,7 @@ Also, remember to copy the ID from your Rhinoceros plug-in before continuing.</D
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>CSZooPlugIn</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
-    <LanguageTag>C#</LanguageTag>
+    <LanguageTag>csharp</LanguageTag>
     <PlatformTag>windows</PlatformTag>
     <ProjectTypeTag>desktop</ProjectTypeTag>
     

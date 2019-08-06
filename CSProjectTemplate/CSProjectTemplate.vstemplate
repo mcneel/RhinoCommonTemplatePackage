@@ -11,7 +11,7 @@
     <CreateNewFolder>true</CreateNewFolder>
     <DefaultName>CSProjectTemplate</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
-    <LanguageTag>C#</LanguageTag>
+    <LanguageTag>csharp</LanguageTag>
     <PlatformTag>windows</PlatformTag>
     <ProjectTypeTag>desktop</ProjectTypeTag>
   </TemplateData>
